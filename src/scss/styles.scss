@@ -2,43 +2,4 @@
    Import partials below
 */
 @import 'normalize';
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-.main {
-  width: 100%;
-  height: 100vh;
-}
-
-.section-fight {
-  width: 100%;
-  height: 70%;
-  background-color: grey;
-  background-image: url(/img/sectionFightFon.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  box-sizing: border-box;
-}
-
-.section-info{
-  display: flex;
-}
-
-.form-place{
-  width: 45%;
-  height: 30vh;
-  background-color: rgb(100, 111, 129);
-  box-sizing: border-box;
-  border: 5px groove #252d77;
-}
-
-.console-place{
-  width: 55%;
-  height: 30vh;
-  background-color: rgb(65, 111, 129);
-  box-sizing: border-box;
-  border: 5px groove #6f7725;
-}
+@import 'main';
