@@ -384,7 +384,7 @@ template {
   width: 100%;
   height: 70%;
   background-color: grey;
-  background-image: url(/img/sectionFightFon.jpg);
+  background-image: url(/src/img/light.gif);
   background-repeat: no-repeat;
   background-size: cover;
   box-sizing: border-box;
