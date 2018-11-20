@@ -81,7 +81,7 @@ gulp.task('svg-sprite', () =>
 
 gulp.task('images', () =>
   gulp
-    .src(['./src/img/**/*.{png,jpg,jpeg,svg}', '!./src/img/sprite/**/*.*'])
+    .src(['./src/img/**/*.{png,jpg,gif,jpeg,svg}', '!./src/img/sprite/**/*.*'])
     .pipe(
       imagemin([
         imagemin.jpegtran({ progressive: true }),
