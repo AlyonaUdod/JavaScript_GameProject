@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.form-place {
+    width: 40%;
+    padding: 10px;   
+    border: 2px solid red;
+
+}
+
+#attack-defense {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.form-title {
+    color: blue;
+}
+
+.form-attack {
+    width: 40%;
+    background: yellow;
+}
+
+.form-attack-list {
+    list-style: none;
+}
+
+.form-defense {
+    width: 40%;
+    background: yellow;
+}
+
+.form-defense-list {
+    list-style: none;
+}
+
+#submit {
+    margin: 10px auto 0;
+    width: 300px;
+}
