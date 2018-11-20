@@ -91,6 +91,7 @@ label {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+  align-items: center;
 }
 
 .form-title {
@@ -103,22 +104,7 @@ label {
   width: 35%;
 }
 
-.form-attack-list {
-  list-style: none;
-}
-
-.form-attack-list > li {
-  width: 100px;
-  background: orangered;
-  margin: 5px auto;
-  padding: 3px;
-  border-radius: 20px;
-}
-
-.form-defense-list {
-  list-style: none;
-}
-
+.form-attack-list > li,
 .form-defense-list > li {
   width: 100px;
   background: orangered;
@@ -129,11 +115,10 @@ label {
 
 .form-defense-list > li > label {
   width: 100%;
-  display: block;
 }
 
 #submit {
-  margin: 10px auto 0;
+  margin: auto;
   border-radius: 50px;
   color: orangered;
   font-size: 18px;
@@ -143,6 +128,36 @@ label {
   background-image: url(/img/mma.jpg);
   background-position: center;
   background-size: cover;
+  -webkit-animation: Anim_Before 1s ease-in infinite 0s;
+  animation: Anim_Before 1s ease-in infinite 0s;
+}
+
+@-webkit-keyframes Anim_Before {
+  from {
+    box-shadow: 0 0 10px orangered, 0 0 10px orangered, 0 0 10px orangered, 0 0 10px orangered;
+  }
+
+  50% {
+    box-shadow: 7px 0 10px orangered, 0 7px 10px  orangered, -7px 0 10px orangered, 0 -7px 10px orangered;
+  }
+
+  to {
+    box-shadow: 0 0 10px orangered, 0 0 10px orangered, 0 0 10px orangered, 0 0 10px orangered;
+  }
+}
+
+@keyframes Anim_Before {
+  from {
+    box-shadow: 0 0 10px orangered, 0 0 10px orangered, 0 0 10px orangered, 0 0 10px orangered;
+  }
+
+  50% {
+    box-shadow: 7px 0 10px orangered, 0 7px 10px  orangered, -7px 0 10px orangered, 0 -7px 10px orangered;
+  }
+
+  to {
+    box-shadow: 0 0 10px orangered, 0 0 10px orangered, 0 0 10px orangered, 0 0 10px orangered;
+  }
 }
 
 .console-log {
@@ -168,5 +183,5 @@ label {
   color: black;
   text-align: right;
   width: 80%;
-  margin-left: 120px;
+  margin-left: 20%;
 }
