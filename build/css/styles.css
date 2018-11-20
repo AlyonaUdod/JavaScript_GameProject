@@ -113,10 +113,6 @@ label {
   border-radius: 20px;
 }
 
-.form-defense-list > li > label {
-  width: 100%;
-}
-
 #submit {
   margin: auto;
   border-radius: 50px;
