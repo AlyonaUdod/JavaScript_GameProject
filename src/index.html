@@ -21,7 +21,27 @@
 </head>
 
 <body>
-
+  <div class="form-place js-form-place">
+     <form id="attack-defense">
+       <section class="form-attack">
+           <h3>Attack</h3>
+             <ul>
+               <li><label><input type="radio" name="attack" value="head"> Head</label></li>
+               <li><label><input type="radio" name="attack" value="body"> Body</label></li>
+               <li><label><input type="radio" name="attack" value="legs"> Legs</label></li>
+             </ul>
+       </section>
+       <section class="form-defense">
+           <h3>Defense</h3>
+           <ul>
+             <li><label><input type="radio" name="defense" value="head"> Head</label></li>
+             <li><label><input type="radio" name="defense" value="body"> Body</label></li>
+             <li><label><input type="radio" name="defense" value="legs"> Legs</label></li>
+           </ul>
+       </section>
+<button type="submit" id="submit">Let's Strike!</button>
+     </form>
+   </div>
   <script src="js/scripts.min.js"></script>
 </body>
 
