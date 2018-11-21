@@ -1,25 +1,65 @@
 'use strict';
 
-var form = document.querySelector('form');
-var but = document.querySelector('#submit');
-var damage = void 0;
-
 var globalObj = {
     lifeUser: 100,
     lifeComputer: 100,
     round: 1,
     userName: null,
+
     user: {
         atack: null,
-        defense: null,
+        defence: null,
         damage: null
     },
+
     computer: {
         atack: null,
-        defense: null,
+        defence: null,
         damage: null
     }
 };
+
+var btn = document.querySelector('#submit');
+function pcAction() {
+    event.preventDefault();
+
+    // урон
+    var maxValue = 20;
+    var headValue = 10;
+    var bodyValue = 5;
+    var legsValue = 8;
+
+    var damageHead = Math.floor(Math.random() * (maxValue - headValue + 1) + headValue);
+    var damageBody = Math.floor(Math.random() * (maxValue - bodyValue + 1) + bodyValue);
+    var damageLegs = Math.floor(Math.random() * (maxValue - legsValue + 1) + legsValue);
+
+    // что будет атаковать пк
+    var pcAttackArr = ['head', 'body', 'legs'];
+    var pcAttack = pcAttackArr[Math.floor(Math.random() * pcAttackArr.length)];
+    globalObj.computer.atack = pcAttack;
+    console.log('computer.atack: ' + globalObj.computer.atack);
+
+    // что будет дефить пк
+    var pcDefArr = ['head', 'body', 'legs'];
+    var pcDef = pcDefArr[Math.floor(Math.random() * pcDefArr.length)];
+    globalObj.computer.defence = pcDef;
+    console.log('computer.defence: ' + globalObj.computer.defence);
+
+    if (globalObj.computer.atack === 'head') {
+        globalObj.computer.damage = damageHead;
+    } else if (globalObj.computer.atack === 'body') {
+        globalObj.computer.damage = damageBody;
+    } else if (globalObj.computer.atack === 'legs') {
+        globalObj.computer.damage = damageLegs;
+    }
+}
+
+btn.addEventListener('click', pcAction);
+'use strict';
+
+var form = document.querySelector('form');
+var but = document.querySelector('#submit');
+var damage = void 0;
 function atack() {
     var max = 20;
     var headMin = 10;
@@ -60,8 +100,15 @@ function userCompair() {
     } else if (globalObj.computer.atack === 'legs' && globalObj.user.defense !== 'legs') {
         globalObj.lifeUser -= globalObj.computer.damage;
     }
-
+    console.log(globalObj);
     return globalObj;
 };
 
-but.addEventListener('click', atack);
+function letHit() {
+    atack();
+    pcAction();
+    userCompair();
+    console.log(globalObj.lifeUser);
+    console.log(globalObj.lifeComputer);
+}
+but.addEventListener('click', letHit);

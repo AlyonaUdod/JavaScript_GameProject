@@ -1,5 +1,3 @@
-let btn = document.querySelector('#submit');
-
 let globalObj = {
     lifeUser: 100,
     lifeComputer: 100,
@@ -19,6 +17,7 @@ let globalObj = {
     }
 };
 
+let btn = document.querySelector('#submit');
 function pcAction() {
     event.preventDefault();
 

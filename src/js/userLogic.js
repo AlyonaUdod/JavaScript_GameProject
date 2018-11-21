@@ -3,23 +3,6 @@
 let form = document.querySelector('form');
 let but = document.querySelector('#submit');
 let damage;
-
-let globalObj = {
-    lifeUser: 100,
-    lifeComputer: 100,
-    round: 1,
-    userName: null,
-    user: {
-        atack: null,
-        defense: null,
-        damage: null,
-    },
-    computer: {
-        atack: null,
-        defense: null,
-        damage: null,
-    }
-}
 function atack() {
     let max = 20;
     let headMin = 10;
@@ -60,9 +43,15 @@ function userCompair() {
     } else if (globalObj.computer.atack === 'legs' && globalObj.user.defense !== 'legs') {
         globalObj.lifeUser -= globalObj.computer.damage;
     }
-
+    console.log(globalObj)
     return globalObj;
 };
 
-but.addEventListener('click', atack);
-function userSleep ()
+function letHit (){
+    atack();
+    pcAction();
+    userCompair();
+    console.log(globalObj.lifeUser);
+    console.log(globalObj.lifeComputer);
+}
+but.addEventListener('click', letHit);
