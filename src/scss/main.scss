@@ -36,9 +36,46 @@
   border: 5px groove orangered;
 }
 
+.section-fight {
+  display: flex;
+  flex-direction: column;
+}
+
+.divContentLife {
+  margin-top: 300px;
+  margin: 0 auto;
+  display: flex;
+  width: 1024px;
+  justify-content: space-between;
+}
+
+.divContentHero {
+  margin: 70px auto 0;
+  width: 1024px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.test{
+  width: 200px;
+  height: 200px;
+  background-color: #000;
+}
+
+.timer{
+  margin: 0 auto;
+}
+
+.test2 {
+  width: 400px;
+  height: 30px;
+  background-color: #000;
+}
+
 ::-webkit-scrollbar { width: .8vh; height: 0vh;}
 /* ::-webkit-scrollbar-track {  background-color: red;} */
 ::-webkit-scrollbar-track-piece { background-color:  #666;}
 ::-webkit-scrollbar-thumb { height: 50px; background-color: white; border-radius: 5px;}
 ::-webkit-scrollbar-corner { background-color: #666;}
 /* ::-webkit-resizer { background-color: red;} */
+
