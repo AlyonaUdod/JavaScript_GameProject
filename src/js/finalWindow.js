@@ -7,12 +7,17 @@ const content = document.querySelector('.fw-modal-content');
 modal.addEventListener('click', modalWindow);
 
 function won(won) {
-  if(won) {
+
+  if(won === 1) {
     title.textContent = 'YOU WON!!!';
     content.style.backgroundImage = "url('./img/won.gif')";
-  } else {
+  } else if(won === 2) {
     title.textContent = 'YOU LOSE';
     content.style.backgroundImage = "url('./img/lose.gif')";
+  } else if (won === 3) {
+    title.textContent = 'DRAW';
+    content.style.backgroundImage = "url('./img/lose.gif')";
+
   }
 }
 
@@ -29,15 +34,17 @@ function showFinalWindow() {
 }
 
 showFinalWindow();
-won(false);
+won(3);
 
 function winOrLose() {
-  if(parseInt(globalObj.lifeUser) <= 0){
+  if(parseInt(globalObj.lifeUser) <= 0 && parseInt(globalObj.lifeComputer) <= 0) {
     showFinalWindow();
-    won(false);
-  } 
-  if(parseInt(globalObj.lifeComputer) <= 0) {
+    won(3);
+  } else if(parseInt(globalObj.lifeUser) <= 0){
     showFinalWindow();
-    won(true);
+    won(2);
+  } else if(parseInt(globalObj.lifeComputer) <= 0) {
+    showFinalWindow();
+    won(1);
   }
 }
