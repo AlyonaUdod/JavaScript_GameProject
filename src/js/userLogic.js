@@ -1,8 +1,9 @@
 'use strict'
 
-let form = document.querySelector('form');
+let form = document.querySelector('#attack-defense');
 let but = document.querySelector('#submit');
 let damage;
+
 function atack() {
     let max = 20;
     let headMin = 10;

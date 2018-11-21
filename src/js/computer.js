@@ -35,13 +35,13 @@ function pcAction() {
     let pcAttackArr = ['head', 'body', 'legs'];
     let pcAttack = pcAttackArr[Math.floor(Math.random() * pcAttackArr.length)];
     globalObj.computer.atack = pcAttack;
-    console.log('computer.atack: ' + globalObj.computer.atack);
+    // console.log('computer.atack: ' + globalObj.computer.atack);
 
     // что будет дефить пк
     let pcDefArr = ['head', 'body', 'legs'];
     let pcDef = pcDefArr[Math.floor(Math.random() * pcDefArr.length)];
     globalObj.computer.defence = pcDef;
-    console.log('computer.defence: ' + globalObj.computer.defence);
+    // console.log('computer.defence: ' + globalObj.computer.defence);
 
     if(globalObj.computer.atack === 'head'){
         globalObj.computer.damage = damageHead;
