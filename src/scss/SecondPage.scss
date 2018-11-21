@@ -1,0 +1,117 @@
+
+.secondPage-wrap{
+    background-color: black;
+    padding-bottom: 20px;
+}
+.secondPage-subtitle {
+    font-family: "Suez+One", sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+    color: orangered;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 60px;
+}
+.secondPage-hero, .secondPage-field {
+   width: 1024px;
+   margin: 0 auto; 
+   display: flex;
+   justify-content: space-between;
+}
+.secondPage-hero-one, .secondPage-hero-second, .secondPage-hero-third, .secondPage-hero-fourth {
+    width: 180px;
+    height: 140px;
+    border: 5px solid black;
+    border-radius: 15px;
+    margin: 0 auto; 
+}
+.secondPage-hero-one {
+    background: url(../img/colossus_run.gif) no-repeat center;
+}   
+.secondPage-hero-one:hover {
+    border: 5px solid orangered;
+} 
+
+.secondPage-hero-second {
+    background: url(../img/mystique_run.gif) no-repeat center;
+}  
+.secondPage-hero-second:hover {
+    border: 5px solid orangered;
+} 
+.secondPage-hero-third {
+    background: url(../img/redskull_run.gif) no-repeat center;
+}
+.secondPage-hero-third:hover {
+    border: 5px solid orangered;
+}  
+.secondPage-hero-fourth {
+    background: url(../img/starlord_run.gif) no-repeat center;
+}  
+.secondPage-hero-fourth:hover {
+    border: 5px solid orangered;
+} 
+.secondPage-field-one, .secondPage-field-second, .secondPage-field-third, .secondPage-field-fourth, .secondPage-field-fifth {
+    width: 185px;
+    height: 140px;
+    border: 5px solid black;
+    border-radius: 15px;
+    margin: 70px auto; 
+}
+.secondPage-field-one {
+    background: url(../img/boat.gif) no-repeat center;
+    background-size: 185px 140px;
+} 
+.secondPage-field-one:hover {
+    border: 5px solid orangered;
+}    
+.secondPage-field-second {
+    background: url(../img/train.gif) no-repeat center;
+    background-size: 185px 140px;
+} 
+.secondPage-field-second:hover {
+    border: 5px solid orangered;
+}  
+.secondPage-field-third {
+    background: url(../img/light.gif) no-repeat center;
+    background-size: 185px 140px;
+} 
+.secondPage-field-third:hover {
+    border: 5px solid orangered;
+} 
+.secondPage-field-fourth {
+    background: url(../img/waterfall.gif) no-repeat center;
+    background-size: 185px 140px;
+} 
+.secondPage-field-fourth:hover {
+    border: 5px solid orangered;
+} 
+.secondPage-field-fifth {
+    background: url(../img/wind.gif) no-repeat center;
+    background-size: 185px 140px;
+} 
+.secondPage-field-fifth:hover {
+    border: 5px solid orangered;
+} 
+.secondPage-link {
+    font-family: "Suez+One", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: black;
+    background-color: white;
+    border: 2px solid orangered;
+    border-radius: 25px;
+    margin: 10px auto 5px;
+    text-align: center;
+    display: block;
+    width: 225px;
+    height: 40px;
+}
+.hide {
+    display: none;
+}
+.show {
+    display: block;
+}
+.active {
+    border: 5px solid orangered;
+} 
