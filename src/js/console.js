@@ -33,6 +33,20 @@
     let defenceUser = null;
     let attackComp = null;
     let defenceComp = null;
+    let demageUser;
+    let demageComp;
+    if (globalObj.user.damage===0) {
+        demageUser = `урон заблокирован`;
+    } else {
+        demageUser =  `урон составляет: ${globalObj.user.damage}`;
+    };
+
+    if (globalObj.computer.damage===0) {
+        demageComp = `урон заблокирован`
+    } else {
+        demageComp = `урон составляет: ${globalObj.computer.damage}`;
+    };
+    
 
     if (globalObj.user.atack === 'head') {
         attackUser = 'голову';
@@ -68,11 +82,11 @@
 
     let pUser = document.createElement('p');
     pUser.classList.add('console_pUser-style');
-    pUser.textContent = `${globalObj.userName} атаковал ${attackUser}, защитил ${defenceUser}, урон составляет: ${globalObj.user.damage}`;
+    pUser.textContent = `${globalObj.userName} атаковал ${attackUser}, защитил ${defenceUser}, ${demageUser}`;
     
     let pComp = document.createElement('p');
     pComp.classList.add('console_pComp-style');
-    pComp.textContent = `Соперник атаковал ${attackComp}, защитил ${defenceComp}, урон составляет: ${globalObj.computer.damage}`;
+    pComp.textContent = `Соперник атаковал ${attackComp}, защитил ${defenceComp}, ${demageComp}`;
     consoleDiv.prepend(pUser,pComp);
  }
 
