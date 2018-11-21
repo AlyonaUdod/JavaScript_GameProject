@@ -2,43 +2,39 @@
 
 // Player
 const healthValueP = document.querySelector('#valueP');
-const inputP = document.querySelector('#inputP');
-const submitP = document.querySelector('#submitP');
-const formP = document.querySelector('#formP');
+
 
 // Computer
 const healthValueC = document.querySelector('#valueC');
-const inputC = document.querySelector('#inputC');
-const submitC = document.querySelector('#submitC');
-const formC = document.querySelector('#formC');
+
 
 
 
 class Health {
   
-  constructor(healthValue, input, submit, form){
+  constructor(healthValue, health){
     this.healthValue = healthValue;
-    this.input = input;
-    this.submit = submit;
-    this.form = form;
-    this.health = 100;
+    this.health = health;
   }
   addDamage(input){
     event.preventDefault();
-    const damage = Number(input.value);
-    console.log(damage);
-    if(this.health >= damage){
-    this.health = this.health - damage;
-  } else {
-    this.health = this.health - this.health;
-  }
-    console.log(this.health);
-    this.pain(this.health);
-    this.changeColor(this.health);
+  //   const damage = input;
+  //   // console.log(damage);
+  //   if(this.health >= damage){
+  //   this.health = this.health - damage;
+  // } else {
+  //   this.health = this.health - this.health;
+  // }
+    // console.log(this.health);
+    this.health = input;
     if(this.health <= 0){
       this.health = 0;
-      console.log('You lose');
     }
+    this.pain(this.health);
+    this.changeColor(this.health);
+    
+      // console.log('You lose');
+    
     
   }
   pain(health){
@@ -54,15 +50,12 @@ class Health {
     }
   }
 }
-const playerHealth = new Health(healthValueP, inputP, submitP, formP);
-const compHealth = new Health(healthValueC, inputC, submitC, formC);
-function startP(){
-  playerHealth.addDamage(inputP);
-  formP.reset();
-}
-function startC(){
-  compHealth.addDamage(inputC);
-  formC.reset();
-}
-submitP.addEventListener('click', startP);
-submitC.addEventListener('click', startC);
+const playerHealth = new Health(healthValueP, globalObj.lifeUser);
+const compHealth = new Health(healthValueC, globalObj.lifeComputer);
+// function startP(){
+//   playerHealth.addDamage(inputP);
+// }
+// function startC(){
+//   compHealth.addDamage(inputC);
+// }
+

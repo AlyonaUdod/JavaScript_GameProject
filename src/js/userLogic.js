@@ -30,19 +30,25 @@ function atack() {
 }
 
 function userCompair() {
-    if (globalObj.user.atack === 'head' && globalObj.computer.defense !== 'head') {
+    if (globalObj.user.atack === 'head' && globalObj.computer.defence !== 'head') {
         globalObj.lifeComputer -= globalObj.user.damage;
-    } else if (globalObj.user.atack === 'body' && globalObj.computer.defense !== 'body') {
+    } else if (globalObj.user.atack === 'body' && globalObj.computer.defence !== 'body') {
         globalObj.lifeComputer -= globalObj.user.damage;
-    } else if (globalObj.user.atack === 'legs' && globalObj.computer.defense !== 'legs') {
+    } else if (globalObj.user.atack === 'legs' && globalObj.computer.defence !== 'legs') {
         globalObj.lifeComputer -= globalObj.user.damage;
+    } else {
+        globalObj.lifeComputer -= 0;
+        console.log('Comp');
     }
-    if (globalObj.computer.atack === 'head' && globalObj.user.defense !== 'head') {
+    if (globalObj.computer.atack === 'head' && globalObj.user.defence !== 'head') {
         globalObj.lifeUser -= globalObj.computer.damage;
-    } else if (globalObj.computer.atack === 'body' && globalObj.user.defense !== 'body') {
+    } else if (globalObj.computer.atack === 'body' && globalObj.user.defence !== 'body') {
         globalObj.lifeUser -= globalObj.computer.damage;
-    } else if (globalObj.computer.atack === 'legs' && globalObj.user.defense !== 'legs') {
+    } else if (globalObj.computer.atack === 'legs' && globalObj.user.defence !== 'legs') {
         globalObj.lifeUser -= globalObj.computer.damage;
+    } else {
+        globalObj.lifeUser -= 0;
+        console.log('User');
     }
     console.log(globalObj)
     return globalObj;
@@ -53,6 +59,8 @@ function letHit (){
     pcAction();
     userCompair();
     describeFight();
+    playerHealth.addDamage(globalObj.lifeUser);
+    compHealth.addDamage(globalObj.lifeComputer);
     console.log(globalObj.lifeUser);
     console.log(globalObj.lifeComputer);
 }
