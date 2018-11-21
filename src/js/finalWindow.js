@@ -48,3 +48,5 @@ function winOrLose() {
     won(1);
   }
 }
+
+setTimeout(function(){ winOrLose(); }, 2000);
