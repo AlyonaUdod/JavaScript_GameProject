@@ -65,3 +65,4 @@ function userCompair() {
 };
 
 but.addEventListener('click', atack);
+function userSleep ()
