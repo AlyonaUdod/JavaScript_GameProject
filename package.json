@@ -44,5 +44,7 @@
     "run-sequence": "^2.2.1",
     "stylelint": "^9.2.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "node": "^8.12.0"
+  }
 }
