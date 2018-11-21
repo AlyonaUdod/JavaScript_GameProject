@@ -1,20 +1,20 @@
- 
- let globalObject = {
-      round: 1,
-      userName: 'Ben',
-      user: {
-          atack: 'head',
-          defence: 'legs',
-          damage: 10
-            },
+ 'use strict'
+//  let globalObject = {
+//       round: 1,
+//       userName: 'Ben',
+//       user: {
+//           atack: 'head',
+//           defence: 'legs',
+//           damage: 10
+//             },
     
-    computer: {
-          atack: 'legs',
-          defence: 'body',
-          damage: 20
-    }
+//     computer: {
+//           atack: 'legs',
+//           defence: 'body',
+//           damage: 20
+//     }
 
-  }//объект с глобальными переменными;
+//   }//объект с глобальными переменными;
 
  const btn = document.querySelector('#submit');//стучим к кнопке
  
@@ -34,33 +34,33 @@
     let attackComp = null;
     let defenceComp = null;
 
-    if (globalObject.user.atack === 'head') {
+    if (globalObj.user.atack === 'head') {
         attackUser = 'голову';
-    } else if (globalObject.user.atack === 'body'){
+    } else if (globalObj.user.atack === 'body'){
         attackUser = 'живот';}
         else {
         attackUser = 'ноги'
         }
 
-    if (globalObject.user.defence === 'head') {
+    if (globalObj.user.defence === 'head') {
             defenceUser = 'голову';
-        } else if (globalObject.user.defence === 'body') {
+        } else if (globalObj.user.defence === 'body') {
             defenceUser = 'живот';}
             else {
             defenceUser = 'ноги'
             }
 
-     if (globalObject.computer.atack === 'head') {
+     if (globalObj.computer.atack === 'head') {
         attackComp = 'голову'} 
-        else if (globalObject.user.atack === 'body') {
+        else if (globalObj.user.atack === 'body') {
         attackComp = 'живот';}
         else {
         attackComp = 'ноги';
         }
         
-    if (globalObject.computer.defence === 'head') {
+    if (globalObj.computer.defence === 'head') {
         defenceComp = 'голову'}
-        else if (globalObject.computer.defence === 'body') {
+        else if (globalObj.computer.defence === 'body') {
             defenceComp = 'живот';}
             else {
                 defenceComp = 'ноги'
@@ -68,12 +68,12 @@
 
     let pUser = document.createElement('p');
     pUser.classList.add('console_pUser-style');
-    pUser.textContent = `${globalObject.userName} атаковал ${attackUser}, защитил ${defenceUser}, урон составляет: ${globalObject.user.damage}`;
+    pUser.textContent = `${globalObj.userName} атаковал ${attackUser}, защитил ${defenceUser}, урон составляет: ${globalObj.user.damage}`;
     
     let pComp = document.createElement('p');
     pComp.classList.add('console_pComp-style');
-    pComp.textContent = `Соперник атаковал ${attackComp}, защитил ${defenceComp}, урон составляет: ${globalObject.computer.damage}`;
+    pComp.textContent = `Соперник атаковал ${attackComp}, защитил ${defenceComp}, урон составляет: ${globalObj.computer.damage}`;
     consoleDiv.prepend(pUser,pComp);
  }
 
- btn.addEventListener('click',describeFight);
+//  btn.addEventListener('click',describeFight);

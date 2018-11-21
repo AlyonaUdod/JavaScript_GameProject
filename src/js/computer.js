@@ -2,7 +2,7 @@ let globalObj = {
     lifeUser: 100,
     lifeComputer: 100,
     round: 1,
-    userName: null,
+    userName: 'Ben',
 
     user: {
         atack: null,

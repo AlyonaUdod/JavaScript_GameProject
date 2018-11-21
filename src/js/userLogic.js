@@ -13,7 +13,7 @@ function atack() {
     let at = document.querySelector('[name="attack"]:checked')
     event.preventDefault();
     globalObj.user.atack = at.value;
-    globalObj.user.defense = def.value;
+    globalObj.user.defence = def.value;
     globalObj.round++;
 
     let damageHead = Math.floor(Math.random() * (max - headMin + 1) + headMin);
@@ -52,6 +52,7 @@ function letHit (){
     atack();
     pcAction();
     userCompair();
+    describeFight();
     console.log(globalObj.lifeUser);
     console.log(globalObj.lifeComputer);
 }
