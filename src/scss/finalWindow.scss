@@ -1,0 +1,103 @@
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+    }         
+    100% {
+        transform: translateY(0%);
+    }       
+  }
+  
+  @keyframes fadeIn {
+    0% {
+        transform: scale(0);
+        opacity: 0.0;       
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1; 
+    }       
+  }
+  
+  @keyframes btnAppearance {
+    0% {
+        opacity: 0;       
+    }
+    100% {
+        opacity: 1; 
+    }
+  }
+  
+  .fw-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(37, 45, 58, 0.7);
+  }
+    
+  .fw-modal-hidden {
+    display: none;
+  }
+    
+  .fw-modal-content {
+    position: absolute;
+    top:20%;
+    left: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 650px;
+    min-height: 380px;
+    padding: 50px 80px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 4px rgba(1, 2, 2, 0.2);
+    border-radius: 2px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-name: slideDown;
+    animation-duration: 2s; 
+    animation-timing-function: ease;
+    border: 4px groove orangered;
+  }
+  
+  .fw-modal-content:hover  .fw-js-close-modal {
+    animation-name: btnAppearance;
+    animation-duration: 2s; 
+    animation-timing-function: linear; 
+    display: block;
+  }
+    
+  .fw-modal-title {
+    margin-bottom: 15px;
+    color: whitesmoke;
+    font-size: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+    animation-name: fadeIn;
+    animation-duration: 5s; 
+    animation-timing-function: ease-in-out; 
+  }
+    
+  .fw-js-close-modal {
+    position: absolute;
+    top: 85%;
+    border: none;
+    padding: 10px 20px;
+    background-color: #0f0e0e;
+    border-radius: 3px;
+    box-shadow: 0 4px 10px rgba(1, 2, 2, 0.2);
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: inherit;
+    display: none;
+    border: 2px groove orangered;
+  }
+    
+  .fw-js-close-modal:hover {
+    background-color: #181717;
+  }

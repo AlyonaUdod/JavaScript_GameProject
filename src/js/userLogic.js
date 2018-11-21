@@ -37,6 +37,7 @@ function userCompair() {
     } else if (globalObj.user.atack === 'legs' && globalObj.computer.defence !== 'legs') {
         globalObj.lifeComputer -= globalObj.user.damage;
     } else {
+        globalObj.computer.damage = 0;
         globalObj.lifeComputer -= 0;
         console.log('Comp');
     }
@@ -47,6 +48,7 @@ function userCompair() {
     } else if (globalObj.computer.atack === 'legs' && globalObj.user.defence !== 'legs') {
         globalObj.lifeUser -= globalObj.computer.damage;
     } else {
+        globalObj.user.damage = 0;
         globalObj.lifeUser -= 0;
         console.log('User');
     }
