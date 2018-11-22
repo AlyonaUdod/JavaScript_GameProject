@@ -1,1 +1,38 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="X-UA-Compatible" content="ie=edge"><meta name="description" content=""><meta name="keywords" content=""><meta name="theme-color" content="#000000"><meta name="copyright" content="Author"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#000000"><meta name="apple-mobile-web-app-title" content="Application Name"><meta name="msapplication-TileImage" content="images/favicons/144x144.png"><meta name="msapplication-TileColor" content="#000000"><meta name="format-detection" content="telephone=no"><title>Placeholder title</title><link rel="stylesheet" href="css/styles.min.css"></head><body><main class="main" id="main"><section class="section-fight js-section-fight"></section><section class="section-info js-section-info"><div class="form-place js-form-place"></div><div class="console-place js-console-place"></div></section></main><script src="./js/index.js"></script><script src="js/scripts.min.js"></script></body></html>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="X-UA-Compatible" content="ie=edge"><meta name="description" content=""><meta name="keywords" content=""><meta name="theme-color" content="#000000"><meta name="copyright" content="Author"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#000000"><meta name="apple-mobile-web-app-title" content="Application Name"><meta name="msapplication-TileImage" content="images/favicons/144x144.png"><meta name="msapplication-TileColor" content="#000000"><meta name="format-detection" content="telephone=no"><title>Placeholder title</title><link rel="stylesheet" href="css/styles.min.css"></head><body><main class="main" id="main"><body><div class="first"></div><div class="two"></div><div class="three"></div><div class="four"></div><style>.first{
+      width: 128px;
+      height: 140px;
+      background-image: url(./img/css_sprites.png);
+      
+      animation: moveX 0.5s steps(4) infinite;
+      position: absolute;
+      left: 1px;
+    }
+    @keyframes moveX{
+      from{background-position-x: 0px;}
+      to{background-position-x: -592px;}
+    }
+    .two{
+      width: 228px;
+      height: 240px;
+      background-image: url(./img/diesmert.png);
+   
+      animation: moveX2 1s steps(6) infinite;
+      position: absolute;
+      left: 1px;
+      margin: 100px;
+    }
+    @keyframes moveX2{
+      from{background-position-x: 0px;}
+      to{background-position-x: -888px;}
+    }
+    .three{
+      width: 140px;
+      height: 140px;
+      background-image: url(./gans.png);
+      animation: moveX3 1s steps(4) infinite;
+      position: absolute;
+      left: 1px;
+      margin: 101px;
+      left: 100px;
+      transform: scaleX(-1);
+    }</style><section class="section-fight js-section-fight"></section><section class="section-info js-section-info"><div class="form-place js-form-place"></div><div class="console-place js-console-place"></div></section></body></main><script src="./js/index.js"></script><script src="js/scripts.min.js"></script></body></html>
