@@ -1,11 +1,9 @@
-.but {
-  margin: 200px;
-}
+
 
 .kick {
   width: 128px;
   height: 140px;
-  background-image: url(./css_sprites.png);
+  background-image: url(../img/css_sprites.png);
   animation: moveX 0.5s steps(4) infinite;
   position: absolute;
   top: 100px;
@@ -15,7 +13,7 @@
 .kickOneL {
   width: 128px;
   height: 140px;
-  background-image: url(./css_sprites.png);
+  background-image: url(../img/css_sprites.png);
   animation: moveX 1.3s steps(4) 1;
   position: absolute;
   transform: scaleX(-1);
@@ -25,7 +23,7 @@
 .kickLOneS {
   width: 128px;
   height: 140px;
-  background-image: url(./css_sprites.png);
+  background-image: url(../img/css_sprites.png);
   animation: moveX 0.7s steps(4) 1;
   position: absolute;
   margin-left: 630px;
@@ -44,7 +42,7 @@
 .deadRight {
   width: 128px;
   height: 140px;
-  background-image: url(./diesmert.png);
+  background-image: url(../img/diesmert.png);
   animation: deadKey 1.5s steps(6) 1;
   position: absolute;
   left: 1px;
@@ -55,7 +53,7 @@
 .deadLeft {
   width: 128px;
   height: 140px;
-  background-image: url(./diesmert.png);
+  background-image: url(../img/diesmert.png);
   animation: deadKey 1.5s steps(6) 1;
   position: absolute;
   left: 1px;
@@ -76,7 +74,7 @@
 .gansAtackL {
   width: 140px;
   height: 140px;
-  background-image: url(./gans.png);
+  background-image: url(../img/gans.png);
   animation: gansKey 1.3s steps(4) infinite;
   position: absolute;
   margin-left: 630px;
@@ -86,7 +84,7 @@
 .gansAtackR {
   width: 140px;
   height: 140px;
-  background-image: url(./gans.png);
+  background-image: url(./img/gans.png);
   animation: gansKey 1.3s steps(4) infinite;
   position: absolute;
   margin-left: 630px;
@@ -105,7 +103,7 @@
 .runPrRight {
   width: 128px;
   height: 140px;
-  background-image: url(./begrun.png);
+  background-image: url(../img/begrun.png);
   animation: runAnim 0.5s steps(6) 6, runPrRight 2.1s ease-out;
   position: absolute;
   transform: scaleX(-1)
@@ -135,7 +133,7 @@
   width: 128px;
   height: 140px;
   margin-left: 1280px;
-  background-image: url(./begrun.png);
+  background-image: url(../img/begrun.png);
   animation: runAnim 0.5s steps(6) 6, runPrLeft 2.1s ease-out;
   position: absolute;
 }
@@ -153,7 +151,7 @@
 .backOne {
   width: 128px;
   height: 140px;
-  background-image: url(./begrun.png);
+  background-image: url(../img/begrun.png);
   animation: runAnim 0.5s steps(6) 6, runBackO 2s forwards;
   position: absolute;
 }
@@ -172,7 +170,7 @@
   width: 128px;
   height: 140px;
   margin-left: 1200px;
-  background-image: url(./begrun.png);
+  background-image: url(../img/begrun.png);
   animation: runAnim 0.5s steps(6) 6, runBackT 2s forwards;
   position: absolute;
   transform: scaleX(-1);
@@ -191,7 +189,7 @@
 .jumpLeft {
   width: 128px;
   height: 148px;
-  background-image: url(./jump.png);
+  background-image: url(../img/jump.png);
   animation: jumpTo 1s steps(3) infinite;
   position: absolute;
   transform: scaleX(-1);
@@ -201,7 +199,7 @@
 .jumpRiht {
   width: 128px;
   height: 148px;
-  background-image: url(./jump.png);
+  background-image: url(../img/jump.png);
   animation: jumpTo 1s steps(3) infinite;
   position: absolute;
   margin-left: 700px;
@@ -221,7 +219,7 @@
 .statikOneR {
   width: 128px;
   height: 148px;
-  background-image: url(./static.png);
+  background-image: url(../img/static.png);
   animation: statiS 0.5s steps(3) infinite;
   position: absolute;
   margin-left: 0px;
@@ -231,10 +229,9 @@
 .statikTwoL {
   width: 128px;
   height: 148px;
-  background-image: url(./static.png);
+  background-image: url(../img/static.png);
   animation: statiS 0.5s steps(3) infinite;
   position: absolute;
-  margin-left: 1200px;
   transform: scaleX(-1);
 
 }
@@ -253,7 +250,7 @@
 .blockRight {
   width: 128px;
   height: 148px;
-  background-image: url(./block.png);
+  background-image: url(../img/block.png);
   animation: blok 0.5s steps(3) 0.7s 1;
   position: absolute;
   left: 630px;
@@ -262,7 +259,7 @@
 .blockLeft {
   width: 128px;
   height: 148px;
-  background-image: url(./block.png);
+  background-image: url(../img/block.png);
   animation: blok 0.5s steps(3) 0.7s 1;
   position: absolute;
   left: 630px;

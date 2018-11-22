@@ -1,0 +1,60 @@
+.circle {
+  text-align: center;
+  position: relative;
+}
+
+/* позиционирование таймре */
+.controllsPanel {
+  position: absolute;
+  left: 50%;
+  top: 85px;
+  transform: translateX(-50%);
+}
+
+/* стилистика таймера */
+.display-remain-time {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 100;
+  font-size: 40px;
+  color: white;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+/* стилизация время прозождения прошло*/
+.progrLine-base {
+  fill: none;
+  stroke: #e81c11;
+  stroke-width: 4px;
+  fill: #323c53;
+}
+
+/* стилизация время прозождения прощло*/
+.progrLine-progress {
+  fill: none;
+  stroke: blue;
+  stroke-width: 4px;
+  /* транщицин для закраски пройднного времени*/
+  transition: stroke-dashoffset 0.7s;
+}
+
+/* стилизация время кружечка*/
+.circle-pointer {
+  fill: #fcfcfd;
+  stroke: green;
+  stroke-width: 2px;
+}
+/* передвижение кружечка */
+#e-pointer { transition: transform 0.7s; }
+
+.roundName{
+  text-align: center;
+  font-size: 30px;
+  color: azure;
+}
+
+.startTimer {
+  position: absolute;
+  left: 0;
+  top: 0;
+}

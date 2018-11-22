@@ -1,6 +1,6 @@
 'use strict'
 
-let button=document.querySelector('button')
+let button = document.querySelector('.but');
 let four=document.querySelector('#run4')
 let five=document.querySelector('#run5')
 // class Personag={
