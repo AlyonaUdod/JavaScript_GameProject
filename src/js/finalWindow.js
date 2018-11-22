@@ -33,7 +33,6 @@ function showFinalWindow() {
 }
 
 function winOrLose() {
-  setTimeout(() => {
     if(parseInt(globalObj.lifeUser) <= 0 && parseInt(globalObj.lifeComputer) <= 0) {
       showFinalWindow();
       won(3);
@@ -44,5 +43,4 @@ function winOrLose() {
       showFinalWindow();
       won(1);
     }
-  }), 2000
 }
