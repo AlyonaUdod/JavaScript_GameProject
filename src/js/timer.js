@@ -21,6 +21,7 @@ function update(timeDuration, timeStep) {
 update(timeDuration, timeDuration); //обновление закрашивания бреущаое
 
 function timer() { // функция для расчета времени
+    globalObj.round++;
     but.disabled = false;
     but.style.opacity = 1;
     let remainTime = Date.now() + (timeDuration * 1000); // время старта (время сейчас +15) фиксируем

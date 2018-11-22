@@ -49,13 +49,39 @@ function activeTwoPageAndHideTreePage(){
   main.classList.add('hide');
   secondPageWrap.classList.remove('hide');
   modal.classList.toggle('fw-modal-hidden');
-  globalObj.lifeComputer = 100;
-  globalObj.lifeUser = 100;
-  globalObj.round = 1;
+
+  globalObj = {
+    lifeUser: 100,
+    lifeComputer: 100,
+    round: 1,
+    userName: null,
+  
+    user: {
+        atack: null,
+        defence: null,
+        damage: null
+    },
+  
+    computer: {
+        atack: null,
+        defence: null,
+        damage: null
+    },
+  
+    userHero: null,
+    compHero: null,
+    arena: null,
+  };
+
   consoleDiv.innerHTML = '';
+
   playerHealth.pain(100);
   playerHealth.changeColor(100);
   compHealth.pain(100);
   compHealth.changeColor(100);
+
+  displayRound.textContent = `ROUND ${globalObj.round}`;
+  clearInterval(intervalTimer);
+  
 }
 

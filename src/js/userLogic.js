@@ -81,6 +81,9 @@ function timerStop () {
 
 
 function timerEnd () {
+    globalObj.computer.damage = 0;
+    globalObj.user.atack = 0;
+    globalObj.user.defence = 0;
   pcAction();
   userCompair();
   describeFight();
