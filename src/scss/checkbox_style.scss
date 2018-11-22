@@ -5,82 +5,93 @@
     justify-content: space-between;
     align-items: center
 }
-
 .form-title {
     color: white;
     text-align: center;
+    font-size: 3.5vh;
 }
-
 .form-attack, .form-defense {
     width: 35%;
 }
-
 .form-attack-list > li, .form-defense-list > li {
-    width: 100px;
+    width: 14vh;
     background: orangered;
-    margin: 5px auto;
-    padding: 3px;
-    border-radius: 20px;
+    margin: .7vh auto;
+    padding: 0.7vh;
+    border-radius: 2.4vh;
+    font-size: 2.6vh;
+    // font-weigth: 500;
 }
-
 #submit {
     margin: auto;
-    border-radius: 50px;
+    border-radius: 10vh;
     color: orangered;   
-    font-size: 18px;
+    font-size: 2.8vh;
     font-weight: 900;
-    width: 100px;
-    height: 100px;
+    width: 16vh;
+    height: 16vh;
     background-image: url(/img/mma.jpg);
     background-position: center;
     background-size: cover;
     animation: Anim_Before 1s ease-in infinite 0s;
 }
-
 @keyframes  Anim_Before {
     from {
-        box-shadow: 0 0 10px orangered,
-        0 0 10px orangered,
-        0 0 10px orangered,
-        0 0 10px orangered;
+        box-shadow: 0 0 1.5vh orangered,
+        0 0 1.5vh orangered,
+        0 0 1.5vh orangered,
+        0 0 1.5vh orangered;
       }
       50% {
-        box-shadow: 7px 0 10px orangered,
-        0 7px 10px  orangered,
-        -7px 0 10px orangered,
-        0 -7px 10px orangered;
+        box-shadow: 1.2vh 0 1.5vh orangered,
+        0 1.2vh 1.5vh orangered,
+        -1.2vh 0 1.5vh orangered,
+        0 -1.2vh 1.5vh orangered;
       }
       to {
-        box-shadow: 0 0 10px orangered,
-        0 0 10px orangered,
-        0 0 10px orangered,
-        0 0 10px orangered;
+        box-shadow: 0 0 1.5vh orangered,
+        0 0 1.5vh orangered,
+        0 0 1.5vh orangered,
+        0 0 1.5vh orangered;
       }
-
 }
-
 .console-log{
     box-sizing: border-box;
     margin: 0.1vh auto;
-    padding: 10px 15px;
+    padding: 1vh 1.5vh;
     background: rgb(235, 235, 235);
     color: orangered;
-    font-size: 14px;
+    font-size: 2.2vh;
     font-weight: 700;
-    height: 18.5vh;
+    height: 22.2vh;
     overflow: scroll;
 }
-
 .console_pUser-style {
-    margin: 3px 0;
+    margin: .3vh 0;
     color: orangered;
     text-align: left;
     width: 80%;
 }
-
 .console_pComp-style {
     color: black;
     text-align: right;
     width: 80%;
     margin-left: 20%;
+}
+
+.console_pRound-style {
+    text-align: center;
+    color: black;   
+    text-decoration-line: underline;
+    font-size: 2.5vh; 
+}
+
+.console_pDiv-style {
+    width: 100%;
+    margin-bottom: .5vh;
+}
+
+.console_pImg-style {
+    text-align: center;
+    color: black;
 }

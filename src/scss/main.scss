@@ -23,11 +23,11 @@
 
 .section-info{
   display: flex;
+  height: 25vh;
 }
 
 .form-place{
   width: 45%;
-  height: 25vh;
   padding: 5px;
   background-color: black;
   box-sizing: border-box;
@@ -38,7 +38,6 @@
 
 .console-place{
   width: 55%;
-  height: 25vh;
   padding: 5px;
   background-color: black;
   box-sizing: border-box;
@@ -55,7 +54,7 @@
   margin: 0 auto;
   display: flex;
   width: 1024px;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .divContentHero {
@@ -67,12 +66,9 @@
 
 .timer{
   margin: 0 auto;
-}
-
-.test2 {
-  width: 400px;
-  height: 30px;
-  background-color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 ::-webkit-scrollbar { width: .8vh; height: 0vh;}
@@ -90,4 +86,10 @@
 .compHero {
   width: 128px;
   height: 128px;
+}
+
+.test2 {
+  font-size: 30px;
+  font-weight: 700;
+  color: beige;
 }

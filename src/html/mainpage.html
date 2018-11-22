@@ -1,11 +1,19 @@
 <div class="main hide" id="main">
   <section class="section-fight js-section-fight">
     <div class="timer">
+      <!-- Player -->
+      <div class="progress-bar">
+        <div id="valueP" class="progress-value"></div>
+      </div>
       //= ./timer.html
+      <!-- Computer -->
+      <div class="progress-bar barC">
+        <div id="valueC" class="progress-value"></div>
+      </div>
     </div>
     <div class="divContentLife">
-      <div class="divLifeUser test2 js-divLifeUser"></div>
-      <div class="divLifeComp test2 js-divLifeComp"></div>
+      <div class="divLifeUser test2 js-divNameUser"><p class="name"></p></div>
+      <div class="divLifeComp test2 js-divNameComp">Computer</div>
     </div>
     <div class="divContentHero">
       <div class="userHero js-userHero"></div>
@@ -14,3 +22,4 @@
   </section>
   //= ./section_info.html
 </div>
+//= ./finalWindow.html

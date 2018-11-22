@@ -37,6 +37,8 @@ function activePage3 () {
     timer();
     userHero.style.backgroundImage = `url(${globalObj.userHero})`;
     compHero.style.backgroundImage = `url(${globalObj.compHero})`;
+    let nameUser = document.querySelector('.name');
+    nameUser.textContent = globalObj.userName;
   } else {
     alert('Select hero and arena both');
   }

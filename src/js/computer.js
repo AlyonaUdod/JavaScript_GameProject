@@ -1,22 +1,3 @@
-let globalObj = {
-    lifeUser: 100,
-    lifeComputer: 100,
-    round: 1,
-    userName: null,
-
-    user: {
-        atack: null,
-        defence: null,
-        damage: null
-    },
-
-    computer: {
-        atack: null,
-        defence: null,
-        damage: null
-    }
-};
-
 let btn = document.querySelector('#submit');
 function pcAction() {
     event.preventDefault();
