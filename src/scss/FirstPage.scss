@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Suez+One');
 .firstPage {
-    background-image: url(../img/main.gif);
+    background-image: url(../img/arena/main.gif);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -63,16 +63,22 @@
       animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
     }
 }
-.firstPage-subtitle {
-    font-family: "Suez+One", sans-serif;
-    font-size: 50px;
-    font-weight: 700;
-    color: orangered;
-    text-align: center;
-    text-transform: uppercase;
-    padding-top: 10px;
-    padding-bottom: 30px;
-    animation: bounceInUp 3s;
+// .firstPage-subtitle {
+//     font-family: "Suez+One", sans-serif;
+//     font-size: 50px;
+//     font-weight: 700;
+//     color: orangered;
+//     text-align: center;
+//     text-transform: uppercase;
+//     padding-top: 10px;
+//     padding-bottom: 30px;
+//     animation: bounceInUp 3s;
+// }
+.bootcamp8 {
+  display: block;
+  width: 500px;
+  margin: 20px auto;
+  animation: bounceInUp 3s;
 }
 @keyframes bounceInUp {
     from,

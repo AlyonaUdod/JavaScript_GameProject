@@ -2,6 +2,7 @@
 .secondPage-wrap{
     background-color: black;
     height: 100vh;
+    background-image: url(/src/img/main.gif);
 }
 .secondPage-subtitle {
     font-family: "Suez+One", sans-serif;
@@ -58,35 +59,35 @@
     margin: 70px auto;
 }
 .secondPage-field-one {
-    background: url(../img/boat.gif) no-repeat center;
+    background: url(../img/arena/boat.gif) no-repeat center;
     background-size: 185px 140px;
 }
 .secondPage-field-one:hover {
     border: 5px solid orangered;
 }
 .secondPage-field-second {
-    background: url(../img/train.gif) no-repeat center;
+    background: url(../img/arena/train.gif) no-repeat center;
     background-size: 185px 140px;
 }
 .secondPage-field-second:hover {
     border: 5px solid orangered;
 }
 .secondPage-field-third {
-    background: url(../img/light.gif) no-repeat center;
+    background: url(../img/arena/light.gif) no-repeat center;
     background-size: 185px 140px;
 }
 .secondPage-field-third:hover {
     border: 5px solid orangered;
 }
 .secondPage-field-fourth {
-    background: url(../img/waterfall.gif) no-repeat center;
+    background: url(../img/arena/waterfall.gif) no-repeat center;
     background-size: 185px 140px;
 }
 .secondPage-field-fourth:hover {
     border: 5px solid orangered;
 }
 .secondPage-field-fifth {
-    background: url(../img/wind.gif) no-repeat center;
+    background: url(../img/arena/wind.gif) no-repeat center;
     background-size: 185px 140px;
 }
 .secondPage-field-fifth:hover {

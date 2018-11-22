@@ -16,15 +16,25 @@ let globalObj = {
       atack: null,
       defence: null,
       damage: null
-  }
+  },
+
+  userHero: null,
+  compHero: null,
+  arena: null,
 };
 
 const firstPageInput = document.querySelector ('#firstPage-input');
 const firstPageButtonStart = document.querySelector ('#firstPage-buttonStart');
 const firstPage = document.querySelector('.firstPage');
 const secondPageWrap = document.querySelector('.secondPage-wrap');
-const form = document.querySelector('.firstPage-form')
-const main = document.querySelector('.main')
+const form = document.querySelector('.firstPage-form');
+const main = document.querySelector('.main');
+const choiceHero = document.querySelector('.secondPage-hero');
+const choiceArena = document.querySelector('.secondPage-field');
+const secondPageLink = document.querySelector('.secondPage-link');
+const sectionFight = document.querySelector('.section-fight');
+const userHero = document.querySelector('.userHero');
+const compHero = document.querySelector('.compHero');
 
 firstPageInput.addEventListener ('input', activeStart);
 firstPageButtonStart.disabled = true;
@@ -43,3 +53,4 @@ function activePage () {
 }
 
 firstPageButtonStart.addEventListener('click', activePage);
+

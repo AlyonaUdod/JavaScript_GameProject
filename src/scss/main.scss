@@ -14,10 +14,11 @@
 .section-fight {
   width: 100%;
   height: 75vh;
-  background-image: url(/img/light.gif);
+  background-image: url(../img/arena/light.gif);
   background-repeat: no-repeat;
   background-size: cover;
   box-sizing: border-box;
+  background-position: bottom;
 }
 
 .section-info{
@@ -58,16 +59,10 @@
 }
 
 .divContentHero {
-  margin: 70px auto 0;
+  margin: 120px auto 0;
   width: 1024px;
   display: flex;
-  justify-content: space-between;
-}
-
-.test{
-  width: 200px;
-  height: 200px;
-  background-color: #000;
+  justify-content: space-around;
 }
 
 .timer{
@@ -87,3 +82,12 @@
 ::-webkit-scrollbar-corner { background-color: #666;}
 /* ::-webkit-resizer { background-color: red;} */
 
+.userHero {
+  width: 128px;
+  height: 128px;
+}
+
+.compHero {
+  width: 128px;
+  height: 128px;
+}
