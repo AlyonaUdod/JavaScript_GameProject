@@ -14,7 +14,7 @@ function atack() {
     event.preventDefault();
     globalObj.user.atack = at.value;
     globalObj.user.defence = def.value;
-    globalObj.round++;
+
 
     let damageHead = Math.floor(Math.random() * (max - headMin + 1) + headMin);
     let damageBody = Math.floor(Math.random() * (max - bodyMin + 1) + bodyMin);
@@ -64,7 +64,28 @@ function letHit (){
     playerHealth.addDamage(globalObj.lifeUser);
     compHealth.addDamage(globalObj.lifeComputer);
     winOrLose();
+    timerStop();
     console.log(globalObj.lifeUser);
     console.log(globalObj.lifeComputer);
 }
 but.addEventListener('click', letHit);
+
+
+function timerStop () {
+  but.disabled = true;
+  but.style.opacity = .2;
+  clearInterval(intervalTimer);
+  setTimeout(timer, 5000);
+  displayRound.textContent = `ROUND ${globalObj.round}`;
+}
+
+
+function timerEnd () {
+  pcAction();
+  userCompair();
+  describeFight();
+  playerHealth.addDamage(globalObj.lifeUser);
+  compHealth.addDamage(globalObj.lifeComputer);
+  winOrLose();
+  timerStop();
+}

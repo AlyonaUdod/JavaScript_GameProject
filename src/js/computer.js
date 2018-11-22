@@ -1,7 +1,7 @@
 let btn = document.querySelector('#submit');
 function pcAction() {
-    event.preventDefault();
-
+    // event.preventDefault();
+    globalObj.round++;
     // урон
     let maxValue = 20;
     let headValue = 10;

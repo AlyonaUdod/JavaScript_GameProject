@@ -13,7 +13,7 @@ class Health {
     this.health = health;
   }
   addDamage(input){
-    event.preventDefault();
+    // event.preventDefault();
   //   const damage = input;
   //   // console.log(damage);
   //   if(this.health >= damage){

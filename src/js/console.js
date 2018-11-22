@@ -7,7 +7,7 @@
 //           defence: 'legs',
 //           damage: 10
 //             },
-    
+
 //     computer: {
 //           atack: 'legs',
 //           defence: 'body',
@@ -17,12 +17,12 @@
 //   }//объект с глобальными переменными;
 
  const btn = document.querySelector('#submit');//стучим к кнопке
- 
- const consoleDiv = document.querySelector('.console-log');//стучим в div 
- 
+
+ const consoleDiv = document.querySelector('.console-log');//стучим в div
+
 
  function describeFight () {
-     event.preventDefault();
+    //  event.preventDefault();
 
     //  let pRound = document.createElement('p');
     //  pRound.classList.add('console_pRound-style');
@@ -46,7 +46,7 @@
     } else {
         demageComp = `Полученный урон составляет: ${globalObj.user.damage}`;
     };
-    
+
 
     if (globalObj.user.atack === 'head') {
         attackUser = 'голову';
@@ -65,13 +65,13 @@
             }
 
      if (globalObj.computer.atack === 'head') {
-        attackComp = 'голову'} 
+        attackComp = 'голову'}
         else if (globalObj.computer.atack === 'body') {
         attackComp = 'живот';}
         else {
         attackComp = 'ноги';
         }
-        
+
     if (globalObj.computer.defence === 'head') {
         defenceComp = 'голову'}
         else if (globalObj.computer.defence === 'body') {
@@ -81,7 +81,7 @@
             }
     let wrapDiv = document.createElement('div');
     wrapDiv.classList.add('console_pDiv-style');
- 
+
     let pRound = document.createElement('p');
     pRound.classList.add('console_pRound-style');
     pRound.textContent = `Round: ${globalObj.round -1}`
@@ -89,7 +89,7 @@
     let pUser = document.createElement('p');
     pUser.classList.add('console_pUser-style');
     pUser.textContent = `${globalObj.userName} атаковал ${attackUser}, защитил ${defenceUser}. ${demageUser}`;
-    
+
     let pComp = document.createElement('p');
     pComp.classList.add('console_pComp-style');
     pComp.textContent = `Соперник атаковал ${attackComp}, защитил ${defenceComp}. ${demageComp}`;

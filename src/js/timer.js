@@ -10,7 +10,7 @@ let length = Math.PI * 2 * 100; // формула для расчета закр
 progressBar.style.strokeDasharray = length; //изменение закраски пройднного времени через CSS
 let intervalTimer; // время интервала
 let timeLeft; // время которое прошло
-let timeDuration = 15; // время
+let timeDuration = 10; // время
 
 function update(timeDuration, timeStep) {
     let offset = - length * timeDuration / (timeStep);
@@ -21,6 +21,8 @@ function update(timeDuration, timeStep) {
 update(timeDuration, timeDuration); //обновление закрашивания бреущаое
 
 function timer() { // функция для расчета времени
+    but.disabled = false;
+    but.style.opacity = 1;
     let remainTime = Date.now() + (timeDuration * 1000); // время старта (время сейчас +15) фиксируем
     displayRound.classList.add("bounceIn"); // анимация для объявления раунда
     displayOutput.classList.remove("shake"); // анимиция для последних 5 секунд
@@ -30,13 +32,11 @@ function timer() { // функция для расчета времени
         if (timeLeft <= 0) { // действия при дохождении к 0
             clearInterval(intervalTimer);
             displayOutput.style.color = "white";
-            round = round + 1;
-            console.log("GET READY TO THE NEXT ROUND!");
-            function sayHello() {  // Функция для изменения номера раунда старта следующего раунда
-                displayRound.textContent = `ROUND ${round}`;
-                timer();
-            }
-            const timerId = setTimeout(sayHello, 5000); // timeOut для перерыва между раундами
+            // round ++;
+            // console.log(round);
+            // console.log("GET READY TO THE NEXT ROUND!");
+            timerEnd();
+
         } else if (timeLeft <= 5) {
             displayOutput.style.color = "red";
             displayRound.classList.remove("bounceIn");
