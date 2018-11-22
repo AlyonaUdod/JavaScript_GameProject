@@ -5,7 +5,7 @@
 
 .section-fight {
   width: 100%;
-  height: 78%;
+  height: 75vh;
   background-image: url(/img/light.gif);
   background-repeat: no-repeat;
   background-size: cover;
@@ -14,11 +14,11 @@
 
 .section-info{
   display: flex;
+  height: 25vh;
 }
 
 .form-place{
   width: 45%;
-  height: 22vh;
   padding: 5px;
   background-color: black;
   box-sizing: border-box;
@@ -29,7 +29,6 @@
 
 .console-place{
   width: 55%;
-  height: 22vh;
   padding: 5px;
   background-color: black;
   box-sizing: border-box;

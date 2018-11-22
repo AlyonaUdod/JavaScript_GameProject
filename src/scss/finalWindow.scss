@@ -1,16 +1,18 @@
 @keyframes slideDown {
     0% {
         transform: translateY(-100%);
+        opacity: 0.5;
     }         
     100% {
         transform: translateY(0%);
+        opacity: 1;
     }       
   }
   
   @keyframes fadeIn {
     0% {
         transform: scale(0);
-        opacity: 0.0;       
+        opacity: 0.0;    
     }
     100% {
         transform: scale(1);
@@ -20,19 +22,29 @@
   
   @keyframes btnAppearance {
     0% {
-        opacity: 0;       
+        opacity: 0.0;       
     }
     100% {
         opacity: 1; 
     }
   }
   
+  @keyframes bcGr {
+    0% {
+      background-color: rgba(37, 45, 58, 0);
+    }         
+    100% {
+      background-color: rgba(37, 45, 58, 0.7);
+    }       
+  }
+
   .fw-modal {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    animation: bcGr 1.5s linear;
     background-color: rgba(37, 45, 58, 0.7);
   }
     
@@ -42,15 +54,15 @@
     
   .fw-modal-content {
     position: absolute;
-    top:20%;
-    left: 25%;
+    top:25%;
+    left: 30%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-width: 650px;
-    min-height: 380px;
-    padding: 50px 80px;
+    min-width: 325px;
+    min-height: 190px;
+    padding: 25px 40px;
     background-color: #ffffff;
     box-shadow: 0 4px 4px rgba(1, 2, 2, 0.2);
     border-radius: 2px;
@@ -72,7 +84,7 @@
   .fw-modal-title {
     margin-bottom: 15px;
     color: whitesmoke;
-    font-size: 50px;
+    font-size: 25px;
     font-weight: 600;
     text-transform: uppercase;
     animation-name: fadeIn;
@@ -89,10 +101,10 @@
     border-radius: 3px;
     box-shadow: 0 4px 10px rgba(1, 2, 2, 0.2);
     color: #ffffff;
-    font-size: 13px;
+    font-size: 7px;
     font-weight: 600;
     text-transform: uppercase;
-    cursor: pointer;
+    // cursor: pointer;
     font-family: inherit;
     display: none;
     border: 2px groove orangered;

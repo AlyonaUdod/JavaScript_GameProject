@@ -37,7 +37,7 @@ function userCompair() {
     } else if (globalObj.user.atack === 'legs' && globalObj.computer.defence !== 'legs') {
         globalObj.lifeComputer -= globalObj.user.damage;
     } else {
-        globalObj.computer.damage = 0;
+        globalObj.user.damage = 0;
         globalObj.lifeComputer -= 0;
         console.log('Comp');
     }
@@ -48,7 +48,7 @@ function userCompair() {
     } else if (globalObj.computer.atack === 'legs' && globalObj.user.defence !== 'legs') {
         globalObj.lifeUser -= globalObj.computer.damage;
     } else {
-        globalObj.user.damage = 0;
+        globalObj.computer.damage = 0;
         globalObj.lifeUser -= 0;
         console.log('User');
     }
@@ -63,6 +63,7 @@ function letHit (){
     describeFight();
     playerHealth.addDamage(globalObj.lifeUser);
     compHealth.addDamage(globalObj.lifeComputer);
+    winOrLose();
     console.log(globalObj.lifeUser);
     console.log(globalObj.lifeComputer);
 }

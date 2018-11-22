@@ -35,16 +35,16 @@
     let defenceComp = null;
     let demageUser;
     let demageComp;
-    if (globalObj.user.damage===0) {
+    if (globalObj.computer.damage===0) {
         demageUser = `урон заблокирован`;
     } else {
-        demageUser =  `урон составляет: ${globalObj.user.damage}`;
+        demageUser =  ` Полученный урон составляет: ${globalObj.computer.damage}`;
     };
 
-    if (globalObj.computer.damage===0) {
+    if (globalObj.user.damage===0) {
         demageComp = `урон заблокирован`
     } else {
-        demageComp = `урон составляет: ${globalObj.computer.damage}`;
+        demageComp = `Полученный урон составляет: ${globalObj.user.damage}`;
     };
     
 
@@ -66,7 +66,7 @@
 
      if (globalObj.computer.atack === 'head') {
         attackComp = 'голову'} 
-        else if (globalObj.user.atack === 'body') {
+        else if (globalObj.computer.atack === 'body') {
         attackComp = 'живот';}
         else {
         attackComp = 'ноги';
@@ -79,15 +79,27 @@
             else {
                 defenceComp = 'ноги'
             }
+    let wrapDiv = document.createElement('div');
+    wrapDiv.classList.add('console_pDiv-style');
+ 
+    let pRound = document.createElement('p');
+    pRound.classList.add('console_pRound-style');
+    pRound.textContent = `Round: ${globalObj.round -1}`
 
     let pUser = document.createElement('p');
     pUser.classList.add('console_pUser-style');
-    pUser.textContent = `${globalObj.userName} атаковал ${attackUser}, защитил ${defenceUser}, ${demageUser}`;
+    pUser.textContent = `${globalObj.userName} атаковал ${attackUser}, защитил ${defenceUser}. ${demageUser}`;
     
     let pComp = document.createElement('p');
     pComp.classList.add('console_pComp-style');
-    pComp.textContent = `Соперник атаковал ${attackComp}, защитил ${defenceComp}, ${demageComp}`;
-    consoleDiv.prepend(pUser,pComp);
+    pComp.textContent = `Соперник атаковал ${attackComp}, защитил ${defenceComp}. ${demageComp}`;
+
+    let pImg = document.createElement('p');
+    pImg.classList.add('console_pImg-style');
+    pImg.textContent = '***';
+
+    wrapDiv.prepend(pRound, pUser,pComp, pImg);
+    consoleDiv.prepend(wrapDiv)
  }
 
 //  btn.addEventListener('click',describeFight);

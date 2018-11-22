@@ -17,7 +17,6 @@ function won(won) {
   } else if (won === 3) {
     title.textContent = 'DRAW';
     content.style.backgroundImage = "url('./img/lose.gif')";
-
   }
 }
 
@@ -33,20 +32,17 @@ function showFinalWindow() {
   modal.classList.toggle('fw-modal-hidden');
 }
 
-showFinalWindow();
-won(3);
-
 function winOrLose() {
-  if(parseInt(globalObj.lifeUser) <= 0 && parseInt(globalObj.lifeComputer) <= 0) {
-    showFinalWindow();
-    won(3);
-  } else if(parseInt(globalObj.lifeUser) <= 0){
-    showFinalWindow();
-    won(2);
-  } else if(parseInt(globalObj.lifeComputer) <= 0) {
-    showFinalWindow();
-    won(1);
-  }
+  setTimeout(() => {
+    if(parseInt(globalObj.lifeUser) <= 0 && parseInt(globalObj.lifeComputer) <= 0) {
+      showFinalWindow();
+      won(3);
+    } else if(parseInt(globalObj.lifeUser) <= 0){
+      showFinalWindow();
+      won(2);
+    } else if(parseInt(globalObj.lifeComputer) <= 0) {
+      showFinalWindow();
+      won(1);
+    }
+  }), 2000
 }
-
-setTimeout(function(){ winOrLose(); }, 2000);
