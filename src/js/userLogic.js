@@ -3,14 +3,14 @@
 let form = document.querySelector('#attack-defense');
 let but = document.querySelector('#submit');
 let damage;
-let def = document.querySelector('[name="defense"]:checked')
-let at = document.querySelector('[name="attack"]:checked')
 
 function atack() {
     let max = 20;
     let headMin = 10;
     let bodyMin = 5;
     let legsMin = 8;
+    let def = document.querySelector('[name="defense"]:checked')
+    let at = document.querySelector('[name="attack"]:checked')
     event.preventDefault();
     globalObj.user.atack = at.value;
     globalObj.user.defence = def.value;
