@@ -49,7 +49,7 @@ function activeStart(){
     }
 }
 
-function activePage () {
+function activePage (event) {
     event.preventDefault();
     firstPage.classList.add('hide');
     secondPageWrap.classList.remove('hide');
