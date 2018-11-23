@@ -1,264 +1,265 @@
 
-.kickOneL {
-  width: 128px;
-  height: 140px;
-  background-image: url(../img/css_sprites.png);
-  animation: moveX 1.3s steps(4) 1;
-  position: absolute;
-  transform: scaleX(-1);
-  margin-left: 700px;
-}
 
-.kickLOneS {
-  width: 128px;
-  height: 140px;
-  background-image: url(../img/css_sprites.png);
-  animation: moveX 0.7s steps(4) 1;
-  position: absolute;
-  margin-left: 630px;
-}
+// .kickOneL {
+//   width: 128px;
+//   height: 140px;
+//   background-image: url(../img/css_sprites.png);
+//   animation: moveX 1.3s steps(4) 1;
+//   position: absolute;
+//   transform: scaleX(-1);
+//   margin-left: 700px;
+// }
 
-@keyframes moveX {
-  from {
-    background-position-x: 0px;
-  }
+// .kickLOneS {
+//   width: 128px;
+//   height: 140px;
+//   background-image: url(../img/css_sprites.png);
+//   animation: moveX 0.7s steps(4) 1;
+//   position: absolute;
+//   margin-left: 630px;
+// }
 
-  to {
-    background-position-x: -592px;
-  }
-}
+// @keyframes moveX {
+//   from {
+//     background-position-x: 0px;
+//   }
 
-.deadRight {
-  width: 128px;
-  height: 140px;
-  background-image: url(../img/diesmert.png);
-  animation: deadKey 1.5s steps(6) 1;
-  position: absolute;
-  left: 1px;
-  margin-left: 1200px;
-  transform: scaleX(-1);
-}
+//   to {
+//     background-position-x: -592px;
+//   }
+// }
 
-.deadLeft {
-  width: 128px;
-  height: 140px;
-  background-image: url(../img/diesmert.png);
-  animation: deadKey 1.5s steps(6) 1;
-  position: absolute;
-  left: 1px;
-  margin-left: 0px;
+// .deadRight {
+//   width: 128px;
+//   height: 140px;
+//   background-image: url(../img/diesmert.png);
+//   animation: deadKey 1.5s steps(6) 1;
+//   position: absolute;
+//   left: 1px;
+//   margin-left: 1200px;
+//   transform: scaleX(-1);
+// }
 
-}
+// .deadLeft {
+//   width: 128px;
+//   height: 140px;
+//   background-image: url(../img/diesmert.png);
+//   animation: deadKey 1.5s steps(6) 1;
+//   position: absolute;
+//   left: 1px;
+//   margin-left: 0px;
 
-@keyframes deadKey {
-  from {
-    background-position-x: 0px;
-  }
+// }
 
-  to {
-    background-position-x: -888px;
-  }
-}
+// @keyframes deadKey {
+//   from {
+//     background-position-x: 0px;
+//   }
 
-.gansAtackL {
-  width: 140px;
-  height: 140px;
-  background-image: url(../img/gans.png);
-  animation: gansKey 1.3s steps(4) infinite;
-  position: absolute;
-  margin-left: 630px;
-  transform: scaleX(-1);
-}
+//   to {
+//     background-position-x: -888px;
+//   }
+// }
 
-.gansAtackR {
-  width: 140px;
-  height: 140px;
-  background-image: url(./img/gans.png);
-  animation: gansKey 1.3s steps(4) infinite;
-  position: absolute;
-  margin-left: 630px;
-}
+// .gansAtackL {
+//   width: 140px;
+//   height: 140px;
+//   background-image: url(../img/gans.png);
+//   animation: gansKey 1.3s steps(4) infinite;
+//   position: absolute;
+//   margin-left: 630px;
+//   transform: scaleX(-1);
+// }
 
-@keyframes gansKey {
-  from {
-    background-position-x: 0px;
-  }
+// .gansAtackR {
+//   width: 140px;
+//   height: 140px;
+//   background-image: url(./img/gans.png);
+//   animation: gansKey 1.3s steps(4) infinite;
+//   position: absolute;
+//   margin-left: 630px;
+// }
 
-  to {
-    background-position-x: -592px;
-  }
-}
+// @keyframes gansKey {
+//   from {
+//     background-position-x: 0px;
+//   }
 
-.runPrRight {
-  width: 128px;
-  height: 140px;
-  background-image: url(../img/begrun.png);
-  animation: runAnim 0.5s steps(6) 6, runPrRight 2.1s ease-out;
-  position: absolute;
-  transform: scaleX(-1)
-}
+//   to {
+//     background-position-x: -592px;
+//   }
+// }
 
-@keyframes runAnim {
-  from {
-    background-position-x: 0px;
-  }
+// .runPrRight {
+//   width: 128px;
+//   height: 140px;
+//   background-image: url(../img/begrun.png);
+//   animation: runAnim 0.5s steps(6) 6, runPrRight 2.1s ease-out;
+//   position: absolute;
+//   transform: scaleX(-1)
+// }
 
-  to {
-    background-position-x: -888px;
-  }
-}
+// @keyframes runAnim {
+//   from {
+//     background-position-x: 0px;
+//   }
 
-@keyframes runPrRight {
-  from {
-    margin-left: 1200px
-  }
+//   to {
+//     background-position-x: -888px;
+//   }
+// }
 
-  to {
-    margin-left: 700px;
-  }
-}
+// @keyframes runPrRight {
+//   from {
+//     margin-left: 1200px
+//   }
 
-.runPrLeft {
-  width: 128px;
-  height: 140px;
-  margin-left: 1280px;
-  background-image: url(../img/begrun.png);
-  animation: runAnim 0.5s steps(6) 6, runPrLeft 2.1s ease-out;
-  position: absolute;
-}
+//   to {
+//     margin-left: 700px;
+//   }
+// }
 
-@keyframes runPrLeft {
-  0% {
-    margin-left: 0px
-  }
+// .runPrLeft {
+//   width: 128px;
+//   height: 140px;
+//   margin-left: 1280px;
+//   background-image: url(../img/begrun.png);
+//   animation: runAnim 0.5s steps(6) 6, runPrLeft 2.1s ease-out;
+//   position: absolute;
+// }
 
-  100% {
-    margin-left: 620px;
-  }
-}
+// @keyframes runPrLeft {
+//   0% {
+//     margin-left: 0px
+//   }
 
-.backOne {
-  width: 128px;
-  height: 140px;
-  background-image: url(../img/begrun.png);
-  animation: runAnim 0.5s steps(6) 6, runBackO 2s forwards;
-  position: absolute;
-}
+//   100% {
+//     margin-left: 620px;
+//   }
+// }
 
-@keyframes runBackO {
-  from {
-    margin-left: 700px
-  }
+// .backOne {
+//   width: 128px;
+//   height: 140px;
+//   background-image: url(../img/begrun.png);
+//   animation: runAnim 0.5s steps(6) 6, runBackO 2s forwards;
+//   position: absolute;
+// }
 
-  to {
-    margin-left: 1200px;
-  }
-}
+// @keyframes runBackO {
+//   from {
+//     margin-left: 700px
+//   }
 
-.backTwo {
-  width: 128px;
-  height: 140px;
-  margin-left: 1200px;
-  background-image: url(../img/begrun.png);
-  animation: runAnim 0.5s steps(6) 6, runBackT 2s forwards;
-  position: absolute;
-  transform: scaleX(-1);
-}
+//   to {
+//     margin-left: 1200px;
+//   }
+// }
 
-@keyframes runBackT {
-  0% {
-    margin-left: 620px
-  }
+// .backTwo {
+//   width: 128px;
+//   height: 140px;
+//   margin-left: 1200px;
+//   background-image: url(../img/begrun.png);
+//   animation: runAnim 0.5s steps(6) 6, runBackT 2s forwards;
+//   position: absolute;
+//   transform: scaleX(-1);
+// }
 
-  100% {
-    margin-left: 0px;
-  }
-}
+// @keyframes runBackT {
+//   0% {
+//     margin-left: 620px
+//   }
 
-.jumpLeft {
-  width: 128px;
-  height: 148px;
-  background-image: url(../img/jump.png);
-  animation: jumpTo 1s steps(3) infinite;
-  position: absolute;
-  transform: scaleX(-1);
-  margin-left: 700px;
-}
+//   100% {
+//     margin-left: 0px;
+//   }
+// }
 
-.jumpRiht {
-  width: 128px;
-  height: 148px;
-  background-image: url(../img/jump.png);
-  animation: jumpTo 1s steps(3) infinite;
-  position: absolute;
-  margin-left: 700px;
-}
+// .jumpLeft {
+//   width: 128px;
+//   height: 148px;
+//   background-image: url(../img/jump.png);
+//   animation: jumpTo 1s steps(3) infinite;
+//   position: absolute;
+//   transform: scaleX(-1);
+//   margin-left: 700px;
+// }
 
-@keyframes jumpTo {
-  from {
-    background-position-x: 0px;
-  }
+// .jumpRiht {
+//   width: 128px;
+//   height: 148px;
+//   background-image: url(../img/jump.png);
+//   animation: jumpTo 1s steps(3) infinite;
+//   position: absolute;
+//   margin-left: 700px;
+// }
 
-  to {
-    background-position-x: -444px;
-  }
-}
+// @keyframes jumpTo {
+//   from {
+//     background-position-x: 0px;
+//   }
 
-
-.statikOneR {
-  width: 128px;
-  height: 148px;
-  background-image: url(../img/static.png);
-  animation: statiS 0.5s steps(3) infinite;
-  margin-left: 0px;
-
-}
-
-.statikTwoL {
-  width: 128px;
-  height: 148px;
-  background-image: url(../img/static.png);
-  animation: statiS 0.5s steps(3) infinite;
-  transform: scaleX(-1);
-
-}
-
-@keyframes statiS {
-  from {
-    background-position-x: 0px;
-  }
-
-  to {
-    background-position-x: -444px;
-  }
-}
+//   to {
+//     background-position-x: -444px;
+//   }
+// }
 
 
-.blockRight {
-  width: 128px;
-  height: 148px;
-  background-image: url(../img/block.png);
-  animation: blok 0.5s steps(3) 0.7s 1;
-  position: absolute;
-  left: 630px;
-}
+// .statikOneR {
+//   width: 128px;
+//   height: 148px;
+//   background-image: url(../img/static.png);
+//   animation: statiS 0.5s steps(3) infinite;
+//   margin-left: 0px;
 
-.blockLeft {
-  width: 128px;
-  height: 148px;
-  background-image: url(../img/block.png);
-  animation: blok 0.5s steps(3) 0.7s 1;
-  position: absolute;
-  left: 630px;
-  transform: scaleX(-1);
-}
+// }
 
-@keyframes blok {
-  from {
-    background-position-x: 0px;
-  }
+// .statikTwoL {
+//   width: 128px;
+//   height: 148px;
+//   background-image: url(../img/static.png);
+//   animation: statiS 0.5s steps(3) infinite;
+//   transform: scaleX(-1);
 
-  to {
-    background-position-x: -444px;
-  }
-}
+// }
+
+// @keyframes statiS {
+//   from {
+//     background-position-x: 0px;
+//   }
+
+//   to {
+//     background-position-x: -444px;
+//   }
+// }
+
+
+// .blockRight {
+//   width: 128px;
+//   height: 148px;
+//   background-image: url(../img/block.png);
+//   animation: blok 0.5s steps(3) 0.7s 1;
+//   position: absolute;
+//   left: 630px;
+// }
+
+// .blockLeft {
+//   width: 128px;
+//   height: 148px;
+//   background-image: url(../img/block.png);
+//   animation: blok 0.5s steps(3) 0.7s 1;
+//   position: absolute;
+//   left: 630px;
+//   transform: scaleX(-1);
+// }
+
+// @keyframes blok {
+//   from {
+//     background-position-x: 0px;
+//   }
+
+//   to {
+//     background-position-x: -444px;
+//   }
+// }

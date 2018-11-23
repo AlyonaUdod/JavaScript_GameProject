@@ -22,6 +22,8 @@ let globalObj = {
   userHero: null,
   compHero: null,
   arena: null,
+  userCharacter:null,
+  compCharacter:null
 };
 
 const firstPageInput = document.querySelector ('#firstPage-input');

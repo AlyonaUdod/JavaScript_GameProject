@@ -1,45 +1,39 @@
 'use strict'
 
-let four=document.querySelector('#run4')
-let five=document.querySelector('#run5')
-// class Personag={
+function move(attackType) {
+  let result = (compHero.getBoundingClientRect().left - userHero.getBoundingClientRect().right) / 2 + 20;
+  moveCharacter(result, userHero, globalObj.userCharacter, 'left', attackType)
+}
+
+function compMove(attackType) {
+    let result = (compHero.getBoundingClientRect().left - userHero.getBoundingClientRect().right) / 2 + 20;
+    moveCharacter(result, compHero, globalObj.compCharacter, 'right', attackType)
+}
+
+function moveCharacter(result, hero, character, side, attackType) {
+  hero.style[side] = `${result}px`;
+  hero.style.backgroundImage = `url(../img/hero/${character}/user-${character}_run.gif)`;
+  setTimeout(() => {
+    console.log('attack USER', attackType);
+    hero.style.backgroundImage = `url(${attackType})`;
+  }, 1000)
+  setTimeout(() => {
+    hero.style.backgroundImage = `url(../img/hero/${character}/user-${character}_run.gif)`;
+    hero.style.transform = side === 'left' ? 'scaleX(-1)' : 'scaleX(1)';
+
+    hero.style[side] = '0';
+
+  }, 2000)
+  setTimeout(() => {
+    hero.style.backgroundImage = `url(../img/hero/user-${character}.gif)`;
+    hero.style.transform = side === 'left' ? 'scaleX(1)' : 'scaleX(-1)';
+  }, 3000)
 
 
-function move(){
-    four.classList.remove('statikOneR');
-    four.classList.add('runPrRight');
-
-    five.classList.remove('statikTwoL');
-    five.classList.add('runPrLeft');
-    console.log('sdfghjkl;');
-    const timer=setTimeout(()=>{
-        four.classList.remove('runPrRight');
-    five.classList.remove('runPrLeft');
-        four.classList.add('blockRight');
-    five.classList.add('kickOneL');
-    },2000)
-    const block = setTimeout(()=>{
-        four.classList.add('kickLOneS');
-        four.classList.remove('blockRight');
-
-    },3700)
-    const backt =setTimeout(()=>{
-        // back1
-        four.classList.remove('kickLOneS');
-        four.classList.add('backOne');
-        five.classList.remove('kickOneL');
-        five.classList.add('backTwo');
-    },4700)
-    const ba =setTimeout(()=>{
-        four.classList.remove('backOne');
-        four.classList.add('statikOneR');
-        five.classList.remove('backTwo');
-        five.classList.add('statikTwoL');
-},7701)
 }
 
 // animation
 // создать кнопку при клику навішать функцию которая 
 // будет актив анимация передвежения 2 персонажих через таймаут 3 секи 
 // активируеться анимация на удар и потом через пол секит возврат на свои
-//  позиции 
+//  позиции
