@@ -14,7 +14,7 @@ function atack() {
     event.preventDefault();
     globalObj.user.atack = at.value;
     globalObj.user.defence = def.value;
-
+    
 
     let damageHead = Math.floor(Math.random() * (max - headMin + 1) + headMin);
     let damageBody = Math.floor(Math.random() * (max - bodyMin + 1) + bodyMin);

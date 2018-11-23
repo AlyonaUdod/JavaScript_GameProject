@@ -1,6 +1,5 @@
 'use strict'
 
-let button = document.querySelector('.but');
 let four=document.querySelector('#run4')
 let five=document.querySelector('#run5')
 // class Personag={
@@ -39,7 +38,6 @@ function move(){
 },7701)
 }
 
-button.addEventListener('click',move)
 // animation
 // создать кнопку при клику навішать функцию которая 
 // будет актив анимация передвежения 2 персонажих через таймаут 3 секи 

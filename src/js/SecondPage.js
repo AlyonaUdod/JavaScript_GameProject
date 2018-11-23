@@ -29,7 +29,7 @@ function activePage3 () {
   if (globalObj.arena && globalObj.userHero) {
     secondPageWrap.classList.add('hide');
     main.classList.remove('hide');
-    const arrCompHero = ['../img/hero/comp-colossus.png', '../img/hero/comp-mystique.png', '../img/hero/comp-redskull.png', '../img/hero/comp-starlord.png'];
+    const arrCompHero = ['../img/hero/user-colossus.gif', '../img/hero/user-mystique.gif', '../img/hero/user-redskull.gif', '../img/hero/user-starlord.gif'];
     const randomOfarrCompHero = Math.floor(Math.random()*arrCompHero.length);
     globalObj.compHero = arrCompHero[randomOfarrCompHero];
     console.log(globalObj);
