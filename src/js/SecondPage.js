@@ -56,3 +56,15 @@ function selectArena (evt) {
   globalObj.arena = evt.target.dataset.url;
   console.log(globalObj);
 };
+
+
+function removeOrange () {
+  hero.forEach(el => el.classList.remove('active'))
+  field.forEach(el => el.classList.remove('active'))
+}  
+
+function removeOrangeBorderPageTwo () {
+  heroActive = false;
+  fieldActive = false;
+  removeOrange()
+}
