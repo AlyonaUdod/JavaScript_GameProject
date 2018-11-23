@@ -33,15 +33,19 @@ function showFinalWindow() {
 }
 
 function winOrLose() {
+   clearInterval(globalObj.intervalTimer);
     if(parseInt(globalObj.lifeUser) <= 0 && parseInt(globalObj.lifeComputer) <= 0) {
       showFinalWindow();
       won(3);
+     
     } else if(parseInt(globalObj.lifeUser) <= 0){
       showFinalWindow();
       won(2);
+
     } else if(parseInt(globalObj.lifeComputer) <= 0) {
       showFinalWindow();
       won(1);
+
     }
 }
 
@@ -49,13 +53,13 @@ function activeTwoPageAndHideTreePage(){
   main.classList.add('hide');
   secondPageWrap.classList.remove('hide');
   modal.classList.toggle('fw-modal-hidden');
-
+  
   globalObj = {
     lifeUser: 100,
     lifeComputer: 100,
     round: 1,
-    userName: null,
-  
+    intervalTimer: null,
+ 
     user: {
         atack: null,
         defence: null,
@@ -80,8 +84,10 @@ function activeTwoPageAndHideTreePage(){
   compHealth.pain(100);
   compHealth.changeColor(100);
 
+  form.reset();
+
   displayRound.textContent = `ROUND ${globalObj.round}`;
-  clearInterval(intervalTimer);
-  
+
+  removeOrangeBorderPageTwo ()
 }
 

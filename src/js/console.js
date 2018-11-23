@@ -84,7 +84,7 @@
 
     let pRound = document.createElement('p');
     pRound.classList.add('console_pRound-style');
-    pRound.textContent = `Round: ${globalObj.round}`
+    pRound.textContent = `Round: ${globalObj.round-1}`
 
     let pUser = document.createElement('p');
     pUser.classList.add('console_pUser-style');

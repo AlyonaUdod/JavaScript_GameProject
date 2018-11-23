@@ -5,6 +5,7 @@ let globalObj = {
   lifeComputer: 100,
   round: 1,
   userName: null,
+  intervalTimer: null,
 
   user: {
       atack: null,
@@ -27,7 +28,7 @@ const firstPageInput = document.querySelector ('#firstPage-input');
 const firstPageButtonStart = document.querySelector ('#firstPage-buttonStart');
 const firstPage = document.querySelector('.firstPage');
 const secondPageWrap = document.querySelector('.secondPage-wrap');
-const form = document.querySelector('.firstPage-form');
+const formStart = document.querySelector('.firstPage-form');
 const main = document.querySelector('.main');
 const choiceHero = document.querySelector('.secondPage-hero');
 const choiceArena = document.querySelector('.secondPage-field');
@@ -47,10 +48,12 @@ function activeStart(){
 }
 
 function activePage () {
+    event.preventDefault();
     firstPage.classList.add('hide');
     secondPageWrap.classList.remove('hide');
     globalObj.userName = firstPageInput.value;
 }
 
-firstPageButtonStart.addEventListener('click', activePage);
+
+formStart.addEventListener('submit', activePage);
 
