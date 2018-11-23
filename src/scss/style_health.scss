@@ -1,7 +1,7 @@
 .progress-bar {
   width: 400px;
   height: 30px;
-  border: 1px solid black;
+  box-shadow: 0 0 4px 1px white;
   transform: skewX(-20deg);
   border-radius: 5px;
 }

@@ -68,7 +68,6 @@ function makeaChoise () {
     }
 }
 
-
 function letHit (){
         atack();
         pcAction();

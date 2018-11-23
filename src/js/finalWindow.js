@@ -59,7 +59,8 @@ function activeTwoPageAndHideTreePage(){
     lifeComputer: 100,
     round: 1,
     intervalTimer: null,
- 
+    userName: globalObj.userName,
+
     user: {
         atack: null,
         defence: null,

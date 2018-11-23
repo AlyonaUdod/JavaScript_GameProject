@@ -36,48 +36,58 @@
     let demageUser;
     let demageComp;
     if (globalObj.computer.damage===0) {
-        demageUser = `урон заблокирован`;
+        demageUser = `Урон заблокирован.`;
     } else {
         demageUser =  ` Полученный урон составляет: ${globalObj.computer.damage}`;
     };
 
     if (globalObj.user.damage===0) {
-        demageComp = `урон заблокирован`
+        demageComp = `Урон заблокирован.`
     } else {
         demageComp = `Полученный урон составляет: ${globalObj.user.damage}`;
     };
 
 
     if (globalObj.user.atack === 'head') {
-        attackUser = 'голову';
+        attackUser = 'атаковал голову,';
     } else if (globalObj.user.atack === 'body'){
-        attackUser = 'живот';}
-        else {
-        attackUser = 'ноги'
+        attackUser = 'атаковал живот,';}
+        else  if (globalObj.user.atack === 'legs') {
+        attackUser = 'атаковал ноги,';
         }
-
-    if (globalObj.user.defence === 'head') {
-            defenceUser = 'голову';
-        } else if (globalObj.user.defence === 'body') {
-            defenceUser = 'живот';}
-            else {
-            defenceUser = 'ноги'
+        else  {
+            attackUser = 'не атаковал'
             }
 
+    if (globalObj.user.defence === 'head') {
+            defenceUser = 'защитил голову';
+        } else if (globalObj.user.defence === 'body') {
+            defenceUser = 'защитил живот';}
+            else if (globalObj.user.defence === 'legs'){
+            defenceUser = 'защитил ноги'
+            }
+            else {defenceUser = 'и пропустил удар'}
+
+
      if (globalObj.computer.atack === 'head') {
-        attackComp = 'голову'}
+            attackComp = 'атаковал голову,'}
         else if (globalObj.computer.atack === 'body') {
-        attackComp = 'живот';}
-        else {
-        attackComp = 'ноги';
-        }
+            attackComp = 'атаковал живот,';}
+        else if (globalObj.computer.atack === 'legs'){
+            attackComp = 'атаковал ноги,';}
+
+        else {attackComp = 'не атаковал';}
 
     if (globalObj.computer.defence === 'head') {
-        defenceComp = 'голову'}
+        defenceComp = 'защитил голову'}
         else if (globalObj.computer.defence === 'body') {
-            defenceComp = 'живот';}
+            defenceComp = 'защитил живот';}
+            else  if (globalObj.computer.defence === 'legs') {
+                defenceComp = 'защитил ноги'
+            }
             else {
-                defenceComp = 'ноги'
+                defenceComp = 'и пропустил удар'
+
             }
     let wrapDiv = document.createElement('div');
     wrapDiv.classList.add('console_pDiv-style');
@@ -88,11 +98,11 @@
 
     let pUser = document.createElement('p');
     pUser.classList.add('console_pUser-style');
-    pUser.textContent = `${globalObj.userName} атаковал ${attackUser}, защитил ${defenceUser}. ${demageUser}`;
+    pUser.textContent = `${globalObj.userName} ${attackUser} ${defenceUser}. ${demageUser}`;
 
     let pComp = document.createElement('p');
     pComp.classList.add('console_pComp-style');
-    pComp.textContent = `Соперник атаковал ${attackComp}, защитил ${defenceComp}. ${demageComp}`;
+    pComp.textContent = `Соперник ${attackComp} ${defenceComp}. ${demageComp}`;
 
     let pImg = document.createElement('p');
     pImg.classList.add('console_pImg-style');
