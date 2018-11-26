@@ -1,16 +1,14 @@
 let btn = document.querySelector('#submit');
 function pcAction() {
-    // event.preventDefault();
-    // globalObj.round++;
     // урон
-    let maxValue = 20;
-    let headValue = 10;
-    let bodyValue = 5;
-    let legsValue = 8;
+    const maxValue = 20;
+    const headValue = 10;
+    const bodyValue = 5;
+    const legsValue = 8;
 
-    let damageHead = Math.floor(Math.random() * (maxValue - headValue + 1) + headValue);
-    let damageBody = Math.floor(Math.random() * (maxValue - bodyValue + 1) + bodyValue);
-    let damageLegs = Math.floor(Math.random() * (maxValue - legsValue + 1) + legsValue);
+    const damageHead = Math.floor(Math.random() * (maxValue - headValue + 1) + headValue);
+    const damageBody = Math.floor(Math.random() * (maxValue - bodyValue + 1) + bodyValue);
+    const damageLegs = Math.floor(Math.random() * (maxValue - legsValue + 1) + legsValue);
 
     // что будет атаковать пк
     let pcAttackArr = ['head', 'body', 'legs'];

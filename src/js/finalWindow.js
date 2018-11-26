@@ -89,6 +89,6 @@ function activeTwoPageAndHideTreePage(){
 
   displayRound.textContent = `ROUND ${globalObj.round}`;
 
-  removeOrangeBorderPageTwo ()
+  removeOrangeBorderPageTwo();
 }
 

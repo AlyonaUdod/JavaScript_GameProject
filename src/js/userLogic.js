@@ -4,7 +4,7 @@ let form = document.querySelector('#attack-defense');
 let but = document.querySelector('#submit');
 let damage;
 
-function atack() {
+function atack(event) {
     let max = 20;
     let headMin = 10;
     let bodyMin = 5;
@@ -14,7 +14,6 @@ function atack() {
     event.preventDefault();
     globalObj.user.atack = at.value;
     globalObj.user.defence = def.value;
-
 
     let damageHead = Math.floor(Math.random() * (max - headMin + 1) + headMin);
     let damageBody = Math.floor(Math.random() * (max - bodyMin + 1) + bodyMin);
@@ -58,18 +57,20 @@ function userCompair() {
 
 
 // при нажатии на кнопку Let's Hit! если не выбраны удар и защита - в консоль выводит текст - сделай выбор
-function makeaChoise () {
+function makeaChoise (event) {
+    event.preventDefault()
     let def = document.querySelector('[name="defense"]:checked')
     let at = document.querySelector('[name="attack"]:checked')
     if (def && at) {
-        letHit()
+        letHit(event)
     } else {
-        addH3()
+        addH3(event)
     }
 }
 
-function letHit (){
-        atack();
+function letHit (event){
+        event.preventDefault();
+        atack(event);
         pcAction();
         userCompair();
         describeFight();
@@ -90,13 +91,9 @@ but.addEventListener('click', makeaChoise);
 
 
 function addH3 () {
-    event.preventDefault();
     let H2 = document.createElement('h2');
     H2.textContent= 'Make a choise!'
-    H2.classList.add('secondPage-subtitle')
-    H2.style.fontSize ='66px';
-    H2.style.color ='red';
-    H2.style.textShadow ='4px 4px 5px black';
+    H2.classList.add('makeAChoise')
     consoleDiv.prepend(H2)
 }
 
@@ -120,8 +117,6 @@ function timerEnd () {
   if (globalObj.lifeUser > 0 && globalObj.lifeComputer > 0) {
     timerStop();
     } else {
-        winOrLose();
+    winOrLose();
     }
 }
-
-
