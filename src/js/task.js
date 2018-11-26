@@ -16,6 +16,7 @@ function moveCharacter(result, hero, character, side, attackType) {
   setTimeout(() => {
     console.log('attack USER', attackType);
     hero.style.backgroundImage = `url(${attackType})`;
+    kickFunction();
   }, 1000)
   setTimeout(() => {
     hero.style.backgroundImage = `url(../img/hero/${character}/user-${character}_run.gif)`;

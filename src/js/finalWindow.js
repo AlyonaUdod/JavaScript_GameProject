@@ -11,14 +11,17 @@ function won(won) {
   if(won === 1) {
     title.textContent = 'YOU WON!!!';
     content.style.backgroundImage = "url('./img/won.gif')";
-    mwinner()
+    mwin();
+
   } else if(won === 2) {
     title.textContent = 'YOU LOSE';
     content.style.backgroundImage = "url('./img/lose.gif')";
     mLoose();
+
   } else if (won === 3) {
     title.textContent = 'DRAW';
     content.style.backgroundImage = "url('./img/lose.gif')";
+    drawFunction();
   }
 }
 
@@ -92,5 +95,7 @@ function activeTwoPageAndHideTreePage(){
   displayRound.textContent = `ROUND ${globalObj.round}`;
 
   removeOrangeBorderPageTwo();
+  
+  music.play();
 }
 

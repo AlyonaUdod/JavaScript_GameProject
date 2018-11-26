@@ -1,8 +1,13 @@
 
 .secondPage-wrap{
-    background-color: black;
+    // background-color: black;
     height: 100vh;
-    background-image: url(/src/img/main.gif);
+    background: linear-gradient(to bottom, black, red, black),url('../img/bc_im_2nd_page.png');
+    // background-image: linear-gradient(to right,blue 0%,red 100%),url('w3css.gif');
+    background-blend-mode: multiply;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .secondPage-subtitle {
     font-family: "Suez+One", sans-serif;

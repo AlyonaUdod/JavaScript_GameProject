@@ -68,8 +68,9 @@
   display: block;
   width: 500px;
   margin: 20px auto;
-  animation: bounceInUp 3s;
+  animation: bounceInDown 3s;
 }
+
 @keyframes bounceInUp {
     from,
     60%,

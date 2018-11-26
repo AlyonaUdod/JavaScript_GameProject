@@ -169,8 +169,8 @@ label {
   display: block;
   width: 500px;
   margin: 20px auto;
-  -webkit-animation: bounceInUp 3s;
-  animation: bounceInUp 3s;
+  -webkit-animation: bounceInDown 3s;
+  animation: bounceInDown 3s;
 }
 
 @-webkit-keyframes bounceInUp {
@@ -271,9 +271,12 @@ label {
 }
 
 .secondPage-wrap {
-  background-color: black;
   height: 100vh;
-  background-image: url(/src/img/main.gif);
+  background: linear-gradient(to bottom, black, red, black), url("../img/bc_im_2nd_page.png");
+  background-blend-mode: multiply;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .secondPage-subtitle {
@@ -481,7 +484,7 @@ label {
 }
 
 .divContentHero {
-  margin: 120px auto 0;
+  margin: 20vh auto 0;
   width: 1024px;
   display: flex;
   justify-content: space-around;

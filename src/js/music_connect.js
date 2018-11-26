@@ -4,21 +4,31 @@ let mstart = document.querySelector('#music_start');
 let fight = document.querySelector('#figth-sound')
 let mwinner = document.querySelector('#winner');
 let mlooser = document.querySelector('#looser');
-let soundOn = document.querySelector('#soundOn')
-function audio(){
-   music.play();
-  //  window.removeEventListener('mousemove', audio);
+let soundOn = document.querySelector('#soundOn');
+let kick = document.querySelector('#kick');
+let draw = document.querySelector('#draw');
+
+// function audio(){
+//    music.play();
+//   //  window.removeEventListener('mousemove', audio);
+// }
+
+// soundOn.addEventListener('click', audio);
+function drawFunction(){
+  fight.pause();
+  draw.play();
 }
 
-soundOn.addEventListener('click',audio);
+function kickFunction(){
+  kick.play();
+}
 
-function audioStart(){
-  music.pause();
-  mstart.play();
+function audio(){
+  music.play();
 }
 
 function fightStart(){
-  mstart.pause();
+  music.pause();
   fight.play();
 }
 
@@ -32,6 +42,7 @@ function mLoose(){
   fight.pause();
   mlooser.play();
 }
-firstPageButtonStart.addEventListener('click', audioStart);
+firstPageButtonStart.addEventListener('click', audio);
 secondPageLink.addEventListener('click', fightStart);
 
+console.log(music);

@@ -90,7 +90,7 @@ function letHit (event){
         if (globalObj.lifeUser > 0 && globalObj.lifeComputer > 0) {
             timerStop();
         } else {
-           setTiomeout(winOrLose, 2000);
+            setTimeout(winOrLose, 1500);
         }  
         console.log(globalObj.lifeUser);
         console.log(globalObj.lifeComputer); 

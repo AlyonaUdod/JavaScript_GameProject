@@ -159,7 +159,7 @@ function won(won) {
   if (won === 1) {
     title.textContent = 'YOU WON!!!';
     content.style.backgroundImage = "url('./img/won.gif')";
-    mwinner();
+    mwin();
   } else if (won === 2) {
     title.textContent = 'YOU LOSE';
     content.style.backgroundImage = "url('./img/lose.gif')";
@@ -167,6 +167,7 @@ function won(won) {
   } else if (won === 3) {
     title.textContent = 'DRAW';
     content.style.backgroundImage = "url('./img/lose.gif')";
+    drawFunction();
   }
 }
 
@@ -240,6 +241,8 @@ function activeTwoPageAndHideTreePage() {
   displayRound.textContent = 'ROUND ' + globalObj.round;
 
   removeOrangeBorderPageTwo();
+
+  music.play();
 }
 'use strict';
 
@@ -372,20 +375,30 @@ var fight = document.querySelector('#figth-sound');
 var mwinner = document.querySelector('#winner');
 var mlooser = document.querySelector('#looser');
 var soundOn = document.querySelector('#soundOn');
-function audio() {
-  music.play();
-  //  window.removeEventListener('mousemove', audio);
+var kick = document.querySelector('#kick');
+var draw = document.querySelector('#draw');
+
+// function audio(){
+//    music.play();
+//   //  window.removeEventListener('mousemove', audio);
+// }
+
+// soundOn.addEventListener('click', audio);
+function drawFunction() {
+  fight.pause();
+  draw.play();
 }
 
-soundOn.addEventListener('click', audio);
+function kickFunction() {
+  kick.play();
+}
 
-function audioStart() {
-  music.pause();
-  mstart.play();
+function audio() {
+  music.play();
 }
 
 function fightStart() {
-  mstart.pause();
+  music.pause();
   fight.play();
 }
 
@@ -399,8 +412,10 @@ function mLoose() {
   fight.pause();
   mlooser.play();
 }
-firstPageButtonStart.addEventListener('click', audioStart);
+firstPageButtonStart.addEventListener('click', audio);
 secondPageLink.addEventListener('click', fightStart);
+
+console.log(music);
 'use strict';
 'use script';
 
@@ -512,6 +527,7 @@ function moveCharacter(result, hero, character, side, attackType) {
   setTimeout(function () {
     console.log('attack USER', attackType);
     hero.style.backgroundImage = 'url(' + attackType + ')';
+    kickFunction();
   }, 1000);
   setTimeout(function () {
     hero.style.backgroundImage = 'url(../img/hero/' + character + '/user-' + character + '_run.gif)';
@@ -678,7 +694,7 @@ function letHit(event) {
     if (globalObj.lifeUser > 0 && globalObj.lifeComputer > 0) {
         timerStop();
     } else {
-        setTiomeout(winOrLose, 2000);
+        setTimeout(winOrLose, 1500);
     }
     console.log(globalObj.lifeUser);
     console.log(globalObj.lifeComputer);
