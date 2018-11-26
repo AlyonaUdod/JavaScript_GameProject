@@ -1,11 +1,11 @@
 'use strict'
-
 // Player
 const healthValueP = document.querySelector('#valueP');
 
 // Computer
 const healthValueC = document.querySelector('#valueC');
 
+// Класс шкал здоровья
 class Health {
   constructor(healthValue, health){
     this.healthValue = healthValue;
@@ -38,5 +38,15 @@ class Health {
     }
   }
 }
+
+// создание двух шкал здоровья
 const playerHealth = new Health(healthValueP, globalObj.lifeUser);
 const compHealth = new Health(healthValueC, globalObj.lifeComputer);
+
+// функция обновления шкал жизни после окончания первой игры. Активируется нажатием кнопки New Fight
+function healthRefresh() {
+  playerHealth.pain(100);
+  playerHealth.changeColor(100);
+  compHealth.pain(100);
+  compHealth.changeColor(100);
+}

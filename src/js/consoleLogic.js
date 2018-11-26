@@ -1,34 +1,10 @@
  'use strict'
-//  let globalObject = {
-//       round: 1,
-//       userName: 'Ben',
-//       user: {
-//           atack: 'head',
-//           defence: 'legs',
-//           damage: 10
-//             },
-
-//     computer: {
-//           atack: 'legs',
-//           defence: 'body',
-//           damage: 20
-//     }
-
-//   }//объект с глобальными переменными;
 
  const btn = document.querySelector('#submit');//стучим к кнопке
-
  const consoleDiv = document.querySelector('.console-log');//стучим в div
 
-
+// функция вывода информации о раунде в консоль
  function describeFight () {
-    //  event.preventDefault();
-
-    //  let pRound = document.createElement('p');
-    //  pRound.classList.add('console_pRound-style');
-    //  pRound.textContent = `Round : ${globalObject.round}`;
-    //  consoleDiv.append(pRound);
-
     let attackUser = null;
     let defenceUser = null;
     let attackComp = null;
@@ -46,7 +22,6 @@
     } else {
         demageComp = `Полученный урон составляет: ${globalObj.user.damage}`;
     };
-
 
     if (globalObj.user.atack === 'head') {
         attackUser = 'атаковал голову,';
@@ -112,4 +87,3 @@
     consoleDiv.prepend(wrapDiv)
  }
 
-//  btn.addEventListener('click',describeFight);

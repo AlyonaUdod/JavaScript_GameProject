@@ -1,6 +1,45 @@
 'use strict';
 
+function move(attackType) {
+  var result = (compHero.getBoundingClientRect().left - userHero.getBoundingClientRect().right) / 2 + 20;
+  moveCharacter(result, userHero, globalObj.userCharacter, 'left', attackType);
+}
+
+function compMove(attackType) {
+  var result = (compHero.getBoundingClientRect().left - userHero.getBoundingClientRect().right) / 2 + 20;
+  moveCharacter(result, compHero, globalObj.compCharacter, 'right', attackType);
+}
+
+function moveCharacter(result, hero, character, side, attackType) {
+  hero.style[side] = result + 'px';
+  hero.style.backgroundImage = 'url(../img/hero/' + character + '/user-' + character + '_run.gif)';
+  setTimeout(function () {
+    console.log('attack USER', attackType);
+    hero.style.backgroundImage = 'url(' + attackType + ')';
+    kickFunction();
+  }, 1000);
+  setTimeout(function () {
+    hero.style.backgroundImage = 'url(../img/hero/' + character + '/user-' + character + '_run.gif)';
+    hero.style.transform = side === 'left' ? 'scaleX(-1)' : 'scaleX(1)';
+
+    hero.style[side] = '0';
+  }, 2000);
+  setTimeout(function () {
+    hero.style.backgroundImage = 'url(../img/hero/user-' + character + '.gif)';
+    hero.style.transform = side === 'left' ? 'scaleX(1)' : 'scaleX(-1)';
+  }, 3000);
+}
+
+// animation
+// создать кнопку при клику навішать функцию которая 
+// будет актив анимация передвежения 2 персонажих через таймаут 3 секи 
+// активируеться анимация на удар и потом через пол секит возврат на свои
+// позиции
+'use strict';
+
 var btn = document.querySelector('#submit');
+
+// функция атаки и защиты компьютера. 
 function pcAction() {
     // урон
     var maxValue = 20;
@@ -33,38 +72,14 @@ function pcAction() {
     }
 }
 
-btn.addEventListener('click', pcAction);
+// btn.addEventListener('click', pcAction);
 'use strict';
-//  let globalObject = {
-//       round: 1,
-//       userName: 'Ben',
-//       user: {
-//           atack: 'head',
-//           defence: 'legs',
-//           damage: 10
-//             },
-
-//     computer: {
-//           atack: 'legs',
-//           defence: 'body',
-//           damage: 20
-//     }
-
-//   }//объект с глобальными переменными;
 
 var btn = document.querySelector('#submit'); //стучим к кнопке
-
 var consoleDiv = document.querySelector('.console-log'); //стучим в div
 
-
+// функция вывода информации о раунде в консоль
 function describeFight() {
-    //  event.preventDefault();
-
-    //  let pRound = document.createElement('p');
-    //  pRound.classList.add('console_pRound-style');
-    //  pRound.textContent = `Round : ${globalObject.round}`;
-    //  consoleDiv.append(pRound);
-
     var attackUser = null;
     var defenceUser = null;
     var attackComp = null;
@@ -144,8 +159,6 @@ function describeFight() {
     wrapDiv.prepend(pRound, pUser, pComp, pImg);
     consoleDiv.prepend(wrapDiv);
 }
-
-//  btn.addEventListener('click',describeFight);
 'use strict';
 
 var modal = document.querySelector('.fw-js-modal-backdrop');
@@ -211,40 +224,31 @@ function activeTwoPageAndHideTreePage() {
     round: 1,
     intervalTimer: null,
     userName: globalObj.userName,
-
     user: {
       atack: null,
       defence: null,
       damage: null
     },
-
     computer: {
       atack: null,
       defence: null,
       damage: null
     },
-
     userHero: null,
     compHero: null,
     arena: null
   };
 
-  consoleDiv.innerHTML = '';
-
-  playerHealth.pain(100);
-  playerHealth.changeColor(100);
-  compHealth.pain(100);
-  compHealth.changeColor(100);
-
+  consoleDiv.innerHTML = '<h1 class="makeAChoise"> Make a choise! </h1>';
+  healthRefresh();
   form.reset();
-
   displayRound.textContent = 'ROUND ' + globalObj.round;
-
   removeOrangeBorderPageTwo();
-
   music.play();
 }
 'use strict';
+
+// глобальный основной объект
 
 var globalObj = {
     lifeUser: 100,
@@ -288,6 +292,7 @@ var compHero = document.querySelector('.compHero');
 firstPageInput.addEventListener('input', activeStart);
 firstPageButtonStart.disabled = true;
 
+// функция изменения цвета кнопки на первой странице
 function activeStart() {
     if (firstPageInput.value.length > 0) {
         firstPageButtonStart.style.color = 'orangered';
@@ -295,6 +300,7 @@ function activeStart() {
     }
 }
 
+// функция перехода с первой страницы на вторую
 function activePage(event) {
     event.preventDefault();
     firstPage.classList.add('hide');
@@ -305,8 +311,6 @@ function activePage(event) {
 
 formStart.addEventListener('submit', activePage);
 'use strict';
-'use strict';
-
 // Player
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -317,6 +321,8 @@ var healthValueP = document.querySelector('#valueP');
 
 // Computer
 var healthValueC = document.querySelector('#valueC');
+
+// Класс шкал здоровья
 
 var Health = function () {
   function Health(healthValue, health) {
@@ -365,8 +371,19 @@ var Health = function () {
   return Health;
 }();
 
+// создание двух шкал здоровья
+
+
 var playerHealth = new Health(healthValueP, globalObj.lifeUser);
 var compHealth = new Health(healthValueC, globalObj.lifeComputer);
+
+// функция обновления шкал жизни после окончания первой игры. Активируется нажатием кнопки New Fight
+function healthRefresh() {
+  playerHealth.pain(100);
+  playerHealth.changeColor(100);
+  compHealth.pain(100);
+  compHealth.changeColor(100);
+}
 'use strict';
 
 var music = document.querySelector('#play');
@@ -378,16 +395,9 @@ var soundOn = document.querySelector('#soundOn');
 var kick = document.querySelector('#kick');
 var draw = document.querySelector('#draw');
 
-// function audio(){
-//    music.play();
-//   //  window.removeEventListener('mousemove', audio);
-// }
-
-// soundOn.addEventListener('click', audio);
-function drawFunction() {
-  fight.pause();
-  draw.play();
-}
+// теги лежат в index.html 
+// Запуски музыки при переходе с первой страницы на вторую. Со второй на третью.
+// При каждом ударе. 3 варианта исхода боя.  
 
 function kickFunction() {
   kick.play();
@@ -408,14 +418,17 @@ function mwin() {
 }
 
 function mLoose() {
-  console.log('aaaaaaaaaaa');
   fight.pause();
   mlooser.play();
 }
+
+function drawFunction() {
+  fight.pause();
+  draw.play();
+}
+
 firstPageButtonStart.addEventListener('click', audio);
 secondPageLink.addEventListener('click', fightStart);
-
-console.log(music);
 'use strict';
 'use script';
 
@@ -466,8 +479,7 @@ function activePage3() {
     var randomOfarrCompHero = Math.floor(Math.random() * arrCompHero.length);
     globalObj.compHero = arrCompHero[randomOfarrCompHero].img;
     globalObj.compCharacter = arrCompHero[randomOfarrCompHero].character;
-
-    console.log(globalObj);
+    // console.log(globalObj);
     sectionFight.style.backgroundImage = 'url(' + globalObj.arena + ')';
     timer();
     userHero.style.backgroundImage = 'url(' + globalObj.userHero + ')';
@@ -478,23 +490,27 @@ function activePage3() {
     alert('Select hero and arena both');
   }
 };
-
 secondPageLink.addEventListener('click', activePage3);
-
-choiceHero.addEventListener('click', selectHero);
 
 function selectHero(evt) {
   globalObj.userHero = evt.target.dataset.url;
   globalObj.userCharacter = evt.target.dataset.character;
   console.log(globalObj);
 };
-choiceArena.addEventListener('click', selectArena);
+choiceHero.addEventListener('click', selectHero);
 
 function selectArena(evt) {
   globalObj.arena = evt.target.dataset.url;
   console.log(globalObj);
 };
+choiceArena.addEventListener('click', selectArena);
 
+//функция убирает оранжевую рамку выделения при нажатии кнопки New Fight в конце игры. 
+function removeOrangeBorderPageTwo() {
+  heroActive = false;
+  fieldActive = false;
+  removeOrange();
+}
 function removeOrange() {
   hero.forEach(function (el) {
     return el.classList.remove('active');
@@ -503,49 +519,6 @@ function removeOrange() {
     return el.classList.remove('active');
   });
 }
-
-function removeOrangeBorderPageTwo() {
-  heroActive = false;
-  fieldActive = false;
-  removeOrange();
-}
-'use strict';
-
-function move(attackType) {
-  var result = (compHero.getBoundingClientRect().left - userHero.getBoundingClientRect().right) / 2 + 20;
-  moveCharacter(result, userHero, globalObj.userCharacter, 'left', attackType);
-}
-
-function compMove(attackType) {
-  var result = (compHero.getBoundingClientRect().left - userHero.getBoundingClientRect().right) / 2 + 20;
-  moveCharacter(result, compHero, globalObj.compCharacter, 'right', attackType);
-}
-
-function moveCharacter(result, hero, character, side, attackType) {
-  hero.style[side] = result + 'px';
-  hero.style.backgroundImage = 'url(../img/hero/' + character + '/user-' + character + '_run.gif)';
-  setTimeout(function () {
-    console.log('attack USER', attackType);
-    hero.style.backgroundImage = 'url(' + attackType + ')';
-    kickFunction();
-  }, 1000);
-  setTimeout(function () {
-    hero.style.backgroundImage = 'url(../img/hero/' + character + '/user-' + character + '_run.gif)';
-    hero.style.transform = side === 'left' ? 'scaleX(-1)' : 'scaleX(1)';
-
-    hero.style[side] = '0';
-  }, 2000);
-  setTimeout(function () {
-    hero.style.backgroundImage = 'url(../img/hero/user-' + character + '.gif)';
-    hero.style.transform = side === 'left' ? 'scaleX(1)' : 'scaleX(-1)';
-  }, 3000);
-}
-
-// animation
-// создать кнопку при клику навішать функцию которая 
-// будет актив анимация передвежения 2 персонажих через таймаут 3 секи 
-// активируеться анимация на удар и потом через пол секит возврат на свои
-//  позиции
 'use strict';
 
 var progressBar = document.querySelector('.progrLine-progress'); // подключаем к прогресс лайну
@@ -603,13 +576,13 @@ function displayTimeLeft(timeLeft) {
     displayOutput.textContent = '00:' + (timeNow < 10 ? '0' : '') + timeNow;
     update(timeLeft, timeDuration); // выводит обновленное закрашивание на экран
 }
-// startTimer.addEventListener('click', timer);
 'use strict';
 
 var form = document.querySelector('#attack-defense');
 var but = document.querySelector('#submit');
 var damage = void 0;
 
+// функция удара пользователя. 
 function atack(event) {
     var max = 20;
     var headMin = 10;
@@ -634,6 +607,7 @@ function atack(event) {
     }
 }
 
+// функция подсчета удара/защиты, вывод анимации. 
 function userCompair() {
     if (globalObj.user.atack === 'head' && globalObj.computer.defence !== 'head') {
         globalObj.lifeComputer -= globalObj.user.damage;
@@ -671,7 +645,7 @@ function userCompair() {
     return globalObj;
 };
 
-// при нажатии на кнопку Let's Hit! если не выбраны удар и защита - в консоль выводит текст - сделай выбор
+// при нажатии на кнопку Let's Hit! если не выбраны удар и защита - в консоль выводит текст - сделай выбор.
 function makeaChoise(event) {
     event.preventDefault();
     var def = document.querySelector('[name="defense"]:checked');
@@ -679,10 +653,11 @@ function makeaChoise(event) {
     if (def && at) {
         letHit(event);
     } else {
-        addH3(event);
+        addTextToConsole();
     }
 }
 
+// основная функция удара. Запускает просчеты рандома, консоль, изменения уровня жизни.
 function letHit(event) {
     event.preventDefault();
     atack(event);
@@ -696,21 +671,23 @@ function letHit(event) {
     } else {
         setTimeout(winOrLose, 1500);
     }
-    console.log(globalObj.lifeUser);
-    console.log(globalObj.lifeComputer);
     form.reset();
     globalObj.user.atack = null;
     globalObj.user.defence = null;
+    // console.log(globalObj.lifeUser);
+    // console.log(globalObj.lifeComputer); 
 }
 but.addEventListener('click', makeaChoise);
 
-function addH3() {
+// функция выводит в консоль подсказку - сделай выбор.
+function addTextToConsole() {
     var H2 = document.createElement('h2');
     H2.textContent = 'Make a choise!';
     H2.classList.add('makeAChoise');
     consoleDiv.prepend(H2);
 }
 
+// функция отвечает за остановку таймера и его запуск после окончания анимации.
 function timerStop() {
     but.disabled = true;
     but.style.opacity = .2;
@@ -719,6 +696,7 @@ function timerStop() {
     displayRound.textContent = 'ROUND ' + globalObj.round;
 }
 
+// функция запускает основную цепочку событий если игрок не успел нанести удар. 
 function timerEnd() {
     globalObj.computer.damage = 0;
     globalObj.user.atack = 0;

@@ -8,16 +8,10 @@ let soundOn = document.querySelector('#soundOn');
 let kick = document.querySelector('#kick');
 let draw = document.querySelector('#draw');
 
-// function audio(){
-//    music.play();
-//   //  window.removeEventListener('mousemove', audio);
-// }
 
-// soundOn.addEventListener('click', audio);
-function drawFunction(){
-  fight.pause();
-  draw.play();
-}
+// теги лежат в index.html 
+// Запуски музыки при переходе с первой страницы на вторую. Со второй на третью.
+// При каждом ударе. 3 варианта исхода боя.  
 
 function kickFunction(){
   kick.play();
@@ -38,11 +32,14 @@ function mwin(){
 }
 
 function mLoose(){
-  console.log('aaaaaaaaaaa');
   fight.pause();
   mlooser.play();
 }
+
+function drawFunction(){
+  fight.pause();
+  draw.play();
+}
+
 firstPageButtonStart.addEventListener('click', audio);
 secondPageLink.addEventListener('click', fightStart);
-
-console.log(music);

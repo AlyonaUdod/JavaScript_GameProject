@@ -1,4 +1,6 @@
 let btn = document.querySelector('#submit');
+
+// функция атаки и защиты компьютера. 
 function pcAction() {
     // урон
     const maxValue = 20;
@@ -31,4 +33,4 @@ function pcAction() {
     }
 }
 
-btn.addEventListener('click', pcAction);
+// btn.addEventListener('click', pcAction);

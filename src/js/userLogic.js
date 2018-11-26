@@ -4,6 +4,7 @@ let form = document.querySelector('#attack-defense');
 let but = document.querySelector('#submit');
 let damage;
 
+// функция удара пользователя. 
 function atack(event) {
     let max = 20;
     let headMin = 10;
@@ -29,6 +30,7 @@ function atack(event) {
     }
 }
 
+// функция подсчета удара/защиты, вывод анимации. 
 function userCompair() {
     if (globalObj.user.atack === 'head' && globalObj.computer.defence !== 'head') {
         globalObj.lifeComputer -= globalObj.user.damage;
@@ -67,7 +69,7 @@ function userCompair() {
 };
 
 
-// при нажатии на кнопку Let's Hit! если не выбраны удар и защита - в консоль выводит текст - сделай выбор
+// при нажатии на кнопку Let's Hit! если не выбраны удар и защита - в консоль выводит текст - сделай выбор.
 function makeaChoise (event) {
     event.preventDefault()
     let def = document.querySelector('[name="defense"]:checked')
@@ -75,10 +77,11 @@ function makeaChoise (event) {
     if (def && at) {
         letHit(event)
     } else {
-        addH3(event)
+        addTextToConsole()
     }
 }
 
+// основная функция удара. Запускает просчеты рандома, консоль, изменения уровня жизни.
 function letHit (event){
         event.preventDefault();
         atack(event);
@@ -92,22 +95,23 @@ function letHit (event){
         } else {
             setTimeout(winOrLose, 1500);
         }  
-        console.log(globalObj.lifeUser);
-        console.log(globalObj.lifeComputer); 
         form.reset()
         globalObj.user.atack = null;
         globalObj.user.defence = null;
+        // console.log(globalObj.lifeUser);
+        // console.log(globalObj.lifeComputer); 
 }
 but.addEventListener('click', makeaChoise);
 
-
-function addH3 () {
+// функция выводит в консоль подсказку - сделай выбор.
+function addTextToConsole() {
     let H2 = document.createElement('h2');
     H2.textContent= 'Make a choise!'
     H2.classList.add('makeAChoise')
     consoleDiv.prepend(H2)
 }
 
+// функция отвечает за остановку таймера и его запуск после окончания анимации.
 function timerStop () {
   but.disabled = true;
   but.style.opacity = .2;
@@ -116,6 +120,7 @@ function timerStop () {
   displayRound.textContent = `ROUND ${globalObj.round}`;
 }
 
+// функция запускает основную цепочку событий если игрок не успел нанести удар. 
 function timerEnd () {
     globalObj.computer.damage = 0;
     globalObj.user.atack = 0;

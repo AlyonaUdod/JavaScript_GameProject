@@ -29,12 +29,10 @@ function moveCharacter(result, hero, character, side, attackType) {
     hero.style.backgroundImage = `url(../img/hero/user-${character}.gif)`;
     hero.style.transform = side === 'left' ? 'scaleX(1)' : 'scaleX(-1)';
   }, 3000)
-
-
 }
 
 // animation
 // создать кнопку при клику навішать функцию которая 
 // будет актив анимация передвежения 2 персонажих через таймаут 3 секи 
 // активируеться анимация на удар и потом через пол секит возврат на свои
-//  позиции
+// позиции

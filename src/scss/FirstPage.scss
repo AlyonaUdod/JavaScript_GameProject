@@ -12,8 +12,8 @@
 }
 .firstPage-logo {
     display: block;
-    width: 550px;
-    height: 200px;
+    width: 76vh;
+    height: 28vh;
     margin: 0 auto;
     animation: bounceInDown 2s;
 }
@@ -45,8 +45,8 @@
 }
 .firstPage-img {
     display: block;
-    width: 200px;
-    height: 200px;
+    width: 25vh;
+    height: 25vh;
     margin: 0 auto;
     border-radius: 50%;
     animation: zoomInUp 1s;
@@ -66,8 +66,8 @@
 
 .bootcamp8 {
   display: block;
-  width: 500px;
-  margin: 20px auto;
+  width: 65vh;
+  margin: 2.7vh auto;
   animation: bounceInDown 3s;
 }
 
@@ -100,7 +100,7 @@
 }
 #firstPage-input {
     font-family: "Suez+One", sans-serif;
-    font-size: 20px;
+    font-size: 2.8vh;
     font-weight: 400;
     font-style: italic;
     color:black;
@@ -114,15 +114,15 @@
 }
 #firstPage-buttonStart {
     font-family: "Suez+One", sans-serif;
-    font-size: 30px;
+    font-size: 3.6vh;
     font-weight: 700;
     color: black;
     background-color: white;
     border: 2px solid orangered;
     border-radius: 25px;
-    margin: 50px auto 5px;
+    margin: 5.5vh auto .7vh;
     text-align: center;
     display: block;
-    width: 225px;
-    height: 40px;
+    width: 27vh;
+    height: 5vh;
 }

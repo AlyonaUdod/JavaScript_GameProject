@@ -50,4 +50,3 @@ function displayTimeLeft(timeLeft) { // выводит обновленное в
     displayOutput.textContent = `00:${timeNow < 10 ? '0' : ''}${timeNow}`;
     update(timeLeft, timeDuration); // выводит обновленное закрашивание на экран
 }
-// startTimer.addEventListener('click', timer);

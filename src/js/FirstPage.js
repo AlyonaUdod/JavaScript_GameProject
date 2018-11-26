@@ -1,5 +1,6 @@
 'use strict';
 
+// глобальный основной объект
 let globalObj = {
   lifeUser: 100,
   lifeComputer: 100,
@@ -42,6 +43,7 @@ const compHero = document.querySelector('.compHero');
 firstPageInput.addEventListener ('input', activeStart);
 firstPageButtonStart.disabled = true;
 
+// функция изменения цвета кнопки на первой странице
 function activeStart(){
     if (firstPageInput.value.length > 0) {
         firstPageButtonStart.style.color = 'orangered';
@@ -49,6 +51,7 @@ function activeStart(){
     }
 }
 
+// функция перехода с первой страницы на вторую
 function activePage (event) {
     event.preventDefault();
     firstPage.classList.add('hide');
@@ -57,6 +60,4 @@ function activePage (event) {
     formStart.reset();
 }
 
-
 formStart.addEventListener('submit', activePage);
-

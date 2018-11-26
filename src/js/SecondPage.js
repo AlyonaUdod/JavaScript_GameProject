@@ -47,8 +47,7 @@ function activePage3() {
     const randomOfarrCompHero = Math.floor(Math.random() * arrCompHero.length);
     globalObj.compHero = arrCompHero[randomOfarrCompHero].img;
     globalObj.compCharacter = arrCompHero[randomOfarrCompHero].character;
-
-    console.log(globalObj);
+    // console.log(globalObj);
     sectionFight.style.backgroundImage = `url(${globalObj.arena})`;
     timer();
     userHero.style.backgroundImage = `url(${globalObj.userHero})`;
@@ -59,31 +58,28 @@ function activePage3() {
     alert('Select hero and arena both');
   }
 };
-
 secondPageLink.addEventListener('click', activePage3);
-
-choiceHero.addEventListener('click', selectHero);
 
 function selectHero(evt) {
   globalObj.userHero = evt.target.dataset.url;
   globalObj.userCharacter = evt.target.dataset.character;
   console.log(globalObj);
 };
-choiceArena.addEventListener('click', selectArena);
+choiceHero.addEventListener('click', selectHero);
 
 function selectArena(evt) {
   globalObj.arena = evt.target.dataset.url;
   console.log(globalObj);
 };
+choiceArena.addEventListener('click', selectArena);
 
-
-function removeOrange() {
-  hero.forEach(el => el.classList.remove('active'))
-  field.forEach(el => el.classList.remove('active'))
-}
-
+//функция убирает оранжевую рамку выделения при нажатии кнопки New Fight в конце игры. 
 function removeOrangeBorderPageTwo() {
   heroActive = false;
   fieldActive = false;
   removeOrange()
+}
+function removeOrange() {
+  hero.forEach(el => el.classList.remove('active'))
+  field.forEach(el => el.classList.remove('active'))
 }

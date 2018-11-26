@@ -50,10 +50,11 @@
 }
 
 .divContentLife {
-  margin-top: 300px;
+  margin-top: 30vh;
   margin: 0 auto;
   display: flex;
-  width: 1024px;
+  min-width: 1024px;
+  max-width: 1024px;
   justify-content: space-around;
 }
 

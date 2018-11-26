@@ -65,37 +65,25 @@ function activeTwoPageAndHideTreePage(){
     round: 1,
     intervalTimer: null,
     userName: globalObj.userName,
-
     user: {
         atack: null,
         defence: null,
         damage: null
     },
-  
     computer: {
         atack: null,
         defence: null,
         damage: null
     },
-  
     userHero: null,
     compHero: null,
     arena: null,
   };
 
-  consoleDiv.innerHTML = '';
-
-  playerHealth.pain(100);
-  playerHealth.changeColor(100);
-  compHealth.pain(100);
-  compHealth.changeColor(100);
-
+  consoleDiv.innerHTML = '<h1 class="makeAChoise"> Make a choise! </h1>';
+  healthRefresh();
   form.reset();
-
   displayRound.textContent = `ROUND ${globalObj.round}`;
-
   removeOrangeBorderPageTwo();
-  
   music.play();
 }
-
