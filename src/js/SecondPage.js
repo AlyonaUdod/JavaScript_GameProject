@@ -6,6 +6,7 @@ let fieldActive = false;
 let hero = document.querySelectorAll('.hero');
 let heroWrapper = document.querySelector('.secondPage-hero');
 heroWrapper.addEventListener('click', activeHero);
+
 function activeHero(event) {
   hero.forEach(function (x) {
     x === event.target ? heroActive = true : null;
@@ -17,21 +18,36 @@ function activeHero(event) {
 let field = document.querySelectorAll('.field');
 let fieldWrapper = document.querySelector('.secondPage-field');
 fieldWrapper.addEventListener('click', activeField);
+
 function activeField(event) {
-   field.forEach(function (x) {
+  field.forEach(function (x) {
     x === event.target ? fieldActive = true : null;
     heroActive === true && fieldActive === true ? secondPageLink.style.color = 'orangered' : null;
     return x === event.target ? x.classList.add('active') : x.classList.remove('active');
-   });
+  });
 };
 
-function activePage3 () {
+function activePage3() {
   if (globalObj.arena && globalObj.userHero) {
     secondPageWrap.classList.add('hide');
     main.classList.remove('hide');
-    const arrCompHero = ['../img/hero/comp-colossus.png', '../img/hero/comp-mystique.png', '../img/hero/comp-redskull.png', '../img/hero/comp-starlord.png'];
-    const randomOfarrCompHero = Math.floor(Math.random()*arrCompHero.length);
-    globalObj.compHero = arrCompHero[randomOfarrCompHero];
+    const arrCompHero = [{
+      img: '../img/hero/user-colossus.gif',
+      character: 'colossus',
+    }, {
+      img: '../img/hero/user-mystique.gif',
+      character: 'mystique'
+    }, {
+      img: '../img/hero/user-redskull.gif',
+      character: 'redskull'
+    }, {
+      img: '../img/hero/user-starlord.gif',
+      character: 'starlord'
+    }];
+    const randomOfarrCompHero = Math.floor(Math.random() * arrCompHero.length);
+    globalObj.compHero = arrCompHero[randomOfarrCompHero].img;
+    globalObj.compCharacter = arrCompHero[randomOfarrCompHero].character;
+
     console.log(globalObj);
     sectionFight.style.backgroundImage = `url(${globalObj.arena})`;
     timer();
@@ -47,23 +63,26 @@ function activePage3 () {
 secondPageLink.addEventListener('click', activePage3);
 
 choiceHero.addEventListener('click', selectHero);
-function selectHero (evt) {
+
+function selectHero(evt) {
   globalObj.userHero = evt.target.dataset.url;
+  globalObj.userCharacter = evt.target.dataset.character;
   console.log(globalObj);
 };
 choiceArena.addEventListener('click', selectArena);
-function selectArena (evt) {
+
+function selectArena(evt) {
   globalObj.arena = evt.target.dataset.url;
   console.log(globalObj);
 };
 
 
-function removeOrange () {
+function removeOrange() {
   hero.forEach(el => el.classList.remove('active'))
   field.forEach(el => el.classList.remove('active'))
-}  
+}
 
-function removeOrangeBorderPageTwo () {
+function removeOrangeBorderPageTwo() {
   heroActive = false;
   fieldActive = false;
   removeOrange()

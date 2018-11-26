@@ -14,6 +14,7 @@ function atack(event) {
     event.preventDefault();
     globalObj.user.atack = at.value;
     globalObj.user.defence = def.value;
+    
 
     let damageHead = Math.floor(Math.random() * (max - headMin + 1) + headMin);
     let damageBody = Math.floor(Math.random() * (max - bodyMin + 1) + bodyMin);
@@ -31,24 +32,34 @@ function atack(event) {
 function userCompair() {
     if (globalObj.user.atack === 'head' && globalObj.computer.defence !== 'head') {
         globalObj.lifeComputer -= globalObj.user.damage;
+        move(`../img/hero/${globalObj.userCharacter}/user-${globalObj.userCharacter}_jump.gif`);
     } else if (globalObj.user.atack === 'body' && globalObj.computer.defence !== 'body') {
         globalObj.lifeComputer -= globalObj.user.damage;
+        move(`../img/hero/${globalObj.userCharacter}/user-${globalObj.userCharacter}_attack.gif`);
     } else if (globalObj.user.atack === 'legs' && globalObj.computer.defence !== 'legs') {
         globalObj.lifeComputer -= globalObj.user.damage;
+        move(`../img/hero/${globalObj.userCharacter}/user-${globalObj.userCharacter}_attack2.gif`);
     } else {
         globalObj.user.damage = 0;
         globalObj.lifeComputer -= 0;
+        compMove(`../img/hero/${globalObj.compCharacter}/user-${globalObj.compCharacter}_block.gif`);
+        move(`../img/hero/${globalObj.userCharacter}/user-${globalObj.userCharacter}_attack.gif`);
         console.log('Comp');
     }
     if (globalObj.computer.atack === 'head' && globalObj.user.defence !== 'head') {
         globalObj.lifeUser -= globalObj.computer.damage;
+        compMove(`../img/hero/${globalObj.compCharacter}/user-${globalObj.compCharacter}_jump.gif`);
     } else if (globalObj.computer.atack === 'body' && globalObj.user.defence !== 'body') {
         globalObj.lifeUser -= globalObj.computer.damage;
+        compMove(`../img/hero/${globalObj.compCharacter}/user-${globalObj.compCharacter}_attack.gif`);
     } else if (globalObj.computer.atack === 'legs' && globalObj.user.defence !== 'legs') {
         globalObj.lifeUser -= globalObj.computer.damage;
+        compMove(`../img/hero/${globalObj.compCharacter}/user-${globalObj.compCharacter}_attack2.gif`);
     } else {
         globalObj.computer.damage = 0;
         globalObj.lifeUser -= 0;
+        move(`../img/hero/${globalObj.userCharacter}/user-${globalObj.userCharacter}_block.gif`);
+        compMove(`../img/hero/${globalObj.compCharacter}/user-${globalObj.compCharacter}_attack.gif`);
         console.log('User');
     }
     console.log(globalObj)
@@ -79,7 +90,7 @@ function letHit (event){
         if (globalObj.lifeUser > 0 && globalObj.lifeComputer > 0) {
             timerStop();
         } else {
-            winOrLose();
+           setTiomeout(winOrLose, 2000);
         }  
         console.log(globalObj.lifeUser);
         console.log(globalObj.lifeComputer); 
@@ -101,7 +112,7 @@ function timerStop () {
   but.disabled = true;
   but.style.opacity = .2;
   clearInterval(globalObj.intervalTimer);
-  setTimeout(timer, 5000);
+  setTimeout(timer, 3000);
   displayRound.textContent = `ROUND ${globalObj.round}`;
 }
 

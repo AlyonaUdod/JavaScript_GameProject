@@ -79,13 +79,20 @@
 /* ::-webkit-resizer { background-color: red;} */
 
 .userHero {
+  left: 0;
   width: 128px;
   height: 128px;
+  position: relative;
+  transition: left 1s linear;
 }
 
 .compHero {
+  right: 0;
   width: 128px;
   height: 128px;
+  transform: scaleX(-1);
+  position: relative;
+  transition: right 1s linear;
 }
 
 .test2 {
