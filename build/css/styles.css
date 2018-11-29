@@ -281,17 +281,17 @@ label {
 
 .secondPage-subtitle {
   font-family: "Suez+One", sans-serif;
-  font-size: 50px;
+  font-size: 7vh;
   font-weight: 700;
   color: orangered;
   text-align: center;
   text-transform: uppercase;
-  padding: 40px;
+  padding: 6vh;
 }
 
 .secondPage-hero,
 .secondPage-field {
-  width: 1024px;
+  width: 130vh;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -301,43 +301,47 @@ label {
 .secondPage-hero-second,
 .secondPage-hero-third,
 .secondPage-hero-fourth {
-  width: 180px;
-  height: 140px;
-  border: 5px solid black;
+  width: 20vh;
+  height: 16vh;
+  border: .7vh solid black;
   border-radius: 15px;
   margin: 0 auto;
 }
 
 .secondPage-hero-one {
   background: url(../img/colossus_run.gif) no-repeat center;
+  background-size: 19vh 19vh;
 }
 
 .secondPage-hero-one:hover {
-  border: 5px solid orangered;
+  border: .7vh solid orangered;
 }
 
 .secondPage-hero-second {
   background: url(../img/mystique_run.gif) no-repeat center;
+  background-size: 19vh 19vh;
 }
 
 .secondPage-hero-second:hover {
-  border: 5px solid orangered;
+  border: .7vh solid orangered;
 }
 
 .secondPage-hero-third {
   background: url(../img/redskull_run.gif) no-repeat center;
+  background-size: 19vh 19vh;
 }
 
 .secondPage-hero-third:hover {
-  border: 5px solid orangered;
+  border: .7vh solid orangered;
 }
 
 .secondPage-hero-fourth {
   background: url(../img/starlord_run.gif) no-repeat center;
+  background-size: 19vh 19vh;
 }
 
 .secondPage-hero-fourth:hover {
-  border: 5px solid orangered;
+  border: .7vh solid orangered;
 }
 
 .secondPage-field-one,
@@ -345,71 +349,71 @@ label {
 .secondPage-field-third,
 .secondPage-field-fourth,
 .secondPage-field-fifth {
-  width: 185px;
-  height: 140px;
-  border: 5px solid black;
+  width: 24vh;
+  height: 18vh;
+  border: .7vh solid black;
   border-radius: 15px;
-  margin: 70px auto;
+  margin: 10vh auto;
 }
 
 .secondPage-field-one {
   background: url(../img/arena/boat.gif) no-repeat center;
-  background-size: 185px 140px;
+  background-size: 24vh 18vh;
 }
 
 .secondPage-field-one:hover {
-  border: 5px solid orangered;
+  border: .7vh solid orangered;
 }
 
 .secondPage-field-second {
   background: url(../img/arena/train.gif) no-repeat center;
-  background-size: 185px 140px;
+  background-size: 24vh 18vh;
 }
 
 .secondPage-field-second:hover {
-  border: 5px solid orangered;
+  border: .7vh solid orangered;
 }
 
 .secondPage-field-third {
   background: url(../img/arena/light.gif) no-repeat center;
-  background-size: 185px 140px;
+  background-size: 24vh 18vh;
 }
 
 .secondPage-field-third:hover {
-  border: 5px solid orangered;
+  border: .7vh solid orangered;
 }
 
 .secondPage-field-fourth {
   background: url(../img/arena/waterfall.gif) no-repeat center;
-  background-size: 185px 140px;
+  background-size: 24vh 18vh;
 }
 
 .secondPage-field-fourth:hover {
-  border: 5px solid orangered;
+  border: .7vh solid orangered;
 }
 
 .secondPage-field-fifth {
   background: url(../img/arena/wind.gif) no-repeat center;
-  background-size: 185px 140px;
+  background-size: 24vh 18vh;
 }
 
 .secondPage-field-fifth:hover {
-  border: 5px solid orangered;
+  border: .7vh solid orangered;
 }
 
 .secondPage-link {
   font-family: "Suez+One", sans-serif;
-  font-size: 30px;
+  font-size: 3.8vh;
   font-weight: 700;
   color: black;
   background-color: white;
   border: 2px solid orangered;
   border-radius: 25px;
-  margin: 10px auto 5px;
+  margin: 1.2vh auto .5vh;
   text-align: center;
   display: block;
-  width: 225px;
-  height: 40px;
+  width: 24vh;
+  height: 5.5vh;
 }
 
 .hide {
@@ -421,7 +425,7 @@ label {
 }
 
 .active {
-  border: 5px solid orangered;
+  border: .7vh solid orangered;
 }
 
 .hide {
@@ -440,6 +444,8 @@ label {
 .section-fight {
   width: 100%;
   height: 75vh;
+  display: flex;
+  flex-direction: column;
   background-image: url(../img/arena/light.gif);
   background-repeat: no-repeat;
   background-size: cover;
@@ -454,39 +460,33 @@ label {
 
 .form-place {
   width: 45%;
-  padding: 5px;
+  padding: .6vh;
   background-color: black;
   box-sizing: border-box;
-  border: 5px groove orangered;
+  border: .6vh groove orangered;
   display: flex;
   align-content: center;
 }
 
 .console-place {
   width: 55%;
-  padding: 5px;
+  padding: .6vh;
   background-color: black;
   box-sizing: border-box;
-  border: 5px groove orangered;
-}
-
-.section-fight {
-  display: flex;
-  flex-direction: column;
+  border: .6vh groove orangered;
 }
 
 .divContentLife {
-  margin-top: 30vh;
+  margin-top: 32vh;
   margin: 0 auto;
   display: flex;
-  min-width: 1024px;
-  max-width: 1024px;
+  width: 122.6vh;
   justify-content: space-around;
 }
 
 .divContentHero {
   margin: 20vh auto 0;
-  width: 1024px;
+  width: 122.6vh;
   display: flex;
   justify-content: space-around;
 }
@@ -523,24 +523,30 @@ label {
 
 .userHero {
   left: 0;
-  width: 128px;
-  height: 128px;
+  width: 24vh;
+  height: 24vh;
   position: relative;
   transition: left 1s linear;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .compHero {
   right: 0;
-  width: 128px;
-  height: 128px;
+  width: 24vh;
+  height: 24vh;
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
   position: relative;
   transition: right 1s linear;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .test2 {
-  font-size: 30px;
+  font-size: 4.4vh;
   font-weight: 700;
   color: beige;
 }
@@ -663,13 +669,13 @@ label {
 
 .makeAChoise {
   font-family: "Suez+One", sans-serif;
-  font-size: 66px;
+  font-size: 8.3vh;
   font-weight: 700;
   color: red;
   text-align: center;
   text-transform: uppercase;
   margin: 3vh;
-  text-shadow: 4px 4px 5px black;
+  text-shadow: .4vh .4vh .5vh black;
 }
 
 .circle {
@@ -677,12 +683,16 @@ label {
   position: relative;
 }
 
+.circle svg {
+  width: 150;
+}
+
 /* позиционирование таймре */
 
 .controllsPanel {
   position: absolute;
   left: 50%;
-  top: 85px;
+  top: 9.85vh;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
 }
@@ -692,7 +702,7 @@ label {
 .display-remain-time {
   font-family: "Times New Roman", Times, serif;
   font-weight: 100;
-  font-size: 40px;
+  font-size: 5.1vh;
   color: white;
   -webkit-animation-duration: 3s;
   animation-duration: 3s;
@@ -700,12 +710,12 @@ label {
   animation-iteration-count: infinite;
 }
 
-/* стилизация время прозождения прошло*/
+/* стилизация время проxождения прошло*/
 
 .progrLine-base {
   fill: none;
   stroke: #e81c11;
-  stroke-width: 4px;
+  stroke-width: .4vh;
   fill: #323c53;
   opacity: 0.5;
 }
@@ -715,8 +725,8 @@ label {
 .progrLine-progress {
   fill: none;
   stroke: blue;
-  stroke-width: 4px;
-  /* транщицин для закраски пройднного времени*/
+  stroke-width: .4vh;
+  /* транзишн для закраски пройднного времени*/
   transition: stroke-dashoffset 0.7s;
 }
 
@@ -725,7 +735,7 @@ label {
 .circle-pointer {
   fill: #fcfcfd;
   stroke: green;
-  stroke-width: 2px;
+  stroke-width: .2vh;
 }
 
 /* передвижение кружечка */
@@ -738,7 +748,7 @@ label {
 
 .roundName {
   text-align: center;
-  font-size: 30px;
+  font-size: 3.8vh;
   color: azure;
 }
 
@@ -749,9 +759,9 @@ label {
 }
 
 .progress-bar {
-  width: 400px;
-  height: 30px;
-  box-shadow: 0 0 4px 1px white;
+  width: 49vh;
+  height: 4vh;
+  box-shadow: 0 0 .4vh .1vh white;
   -webkit-transform: skewX(-20deg);
   transform: skewX(-20deg);
   border-radius: 5px;
@@ -766,7 +776,7 @@ label {
 
 .progress-value {
   width: 100%;
-  height: 30px;
+  height: 4vh;
   background-image: linear-gradient(to top, #ffffff 0%, #00db00 25%, #00db00 50%, #00db00 75%, #ffffff 100%);
   border-radius: 5px;
   transition: width .6s linear 1.5s;
@@ -774,28 +784,20 @@ label {
 
 @-webkit-keyframes slideDown {
   0% {
-    -webkit-transform: translateY(-100%);
-    transform: translateY(-100%);
     opacity: 0.0;
   }
 
   100% {
-    -webkit-transform: translateY(0%);
-    transform: translateY(0%);
     opacity: 1;
   }
 }
 
 @keyframes slideDown {
   0% {
-    -webkit-transform: translateY(-100%);
-    transform: translateY(-100%);
     opacity: 0.0;
   }
 
   100% {
-    -webkit-transform: translateY(0%);
-    transform: translateY(0%);
     opacity: 1;
   }
 }
@@ -885,27 +887,29 @@ label {
 
 .fw-modal-content {
   position: absolute;
-  top: 25vh;
-  left: 25%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-width: 650px;
-  min-height: 350px;
-  padding: 25px 40px;
+  width: 75vh;
+  height: 44vh;
+  padding: 2.8vh 4.6vh;
   background-color: #ffffff;
-  box-shadow: 0 4px 4px rgba(1, 2, 2, 0.2);
+  box-shadow: 0 0.4vh 0.4vh rgba(1, 2, 2, 0.2);
   border-radius: 2px;
   background-size: cover;
   background-repeat: no-repeat;
   -webkit-animation-name: slideDown;
   animation-name: slideDown;
-  -webkit-animation-duration: 2s;
-  animation-duration: 2s;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
   -webkit-animation-timing-function: ease;
   animation-timing-function: ease;
-  border: 4px groove orangered;
+  border: .6vh groove orangered;
 }
 
 .fw-modal-content:hover .fw-js-close-modal {
@@ -919,9 +923,9 @@ label {
 }
 
 .fw-modal-title {
-  margin-bottom: 15px;
+  margin-bottom: 1.8vh;
   color: whitesmoke;
-  font-size: 56px;
+  font-size: 6.2vh;
   font-weight: 600;
   text-transform: uppercase;
   -webkit-animation-name: fadeIn;
@@ -934,20 +938,23 @@ label {
 
 .fw-js-close-modal {
   position: absolute;
-  top: 85%;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, 310%);
+  transform: translate(-50%, 310%);
   border: none;
-  padding: 10px 20px;
+  padding: 1.2vh 2.4vh;
   background-color: #0f0e0e;
   border-radius: 3px;
-  box-shadow: 0 4px 10px rgba(1, 2, 2, 0.2);
+  box-shadow: 0 0.4vh 1vh rgba(1, 2, 2, 0.2);
   color: #ffffff;
-  font-size: 16px;
+  font-size: 2vh;
   font-weight: 600;
   text-transform: uppercase;
   cursor: pointer;
   font-family: inherit;
   display: none;
-  border: 2px groove orangered;
+  border: .2vh groove orangered;
 }
 
 .fw-js-close-modal:hover {

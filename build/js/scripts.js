@@ -13,20 +13,33 @@ function compMove(attackType) {
 function moveCharacter(result, hero, character, side, attackType) {
   hero.style[side] = result + 'px';
   hero.style.backgroundImage = 'url(../img/hero/' + character + '/user-' + character + '_run.gif)';
+  hero.style.width = '20vh';
+  hero.style.height = '20vh';
+  hero.style.marginTop = '2vh';
+
   setTimeout(function () {
     console.log('attack USER', attackType);
     hero.style.backgroundImage = 'url(' + attackType + ')';
+    hero.style.width = '20vh';
+    hero.style.height = '20vh';
+    hero.style.marginTop = '2vh';
+
     kickFunction();
   }, 1000);
   setTimeout(function () {
     hero.style.backgroundImage = 'url(../img/hero/' + character + '/user-' + character + '_run.gif)';
     hero.style.transform = side === 'left' ? 'scaleX(-1)' : 'scaleX(1)';
-
+    hero.style.width = '20vh';
+    hero.style.height = '20vh';
+    hero.style.marginTop = '2vh';
     hero.style[side] = '0';
   }, 2000);
   setTimeout(function () {
     hero.style.backgroundImage = 'url(../img/hero/user-' + character + '.gif)';
     hero.style.transform = side === 'left' ? 'scaleX(1)' : 'scaleX(-1)';
+    hero.style.width = '24vh';
+    hero.style.height = '24vh';
+    hero.style.marginTop = '0vh';
   }, 3000);
 }
 
@@ -168,13 +181,14 @@ var content = document.querySelector('.fw-modal-content');
 var modalClose = document.querySelector('.fw-btn');
 modalClose.addEventListener('click', activeTwoPageAndHideTreePage);
 
+// функция отвечает за вывод текста и фоновой картинки в модальном окне
 function won(won) {
   if (won === 1) {
-    title.textContent = 'YOU WON!!!';
+    title.textContent = 'YOU WON!';
     content.style.backgroundImage = "url('./img/won.gif')";
     mwin();
   } else if (won === 2) {
-    title.textContent = 'YOU LOSE';
+    title.textContent = 'YOU LOST';
     content.style.backgroundImage = "url('./img/lose.gif')";
     mLoose();
   } else if (won === 3) {
@@ -184,21 +198,12 @@ function won(won) {
   }
 }
 
-function modalWindow(_ref) {
-  var target = _ref.target;
-
-  var valid = function valid(name) {
-    return target.className.indexOf(name) > 0 ? true : false;
-  };
-  if (valid('fw-js-close-modal')) {
-    modal.classList.toggle('fw-modal-hidden');
-  }
-}
-
+// функция запускает модальное окно
 function showFinalWindow() {
   modal.classList.toggle('fw-modal-hidden');
 }
 
+// функция запускается когда кто-то из игроков потерял всю жизнь.
 function winOrLose() {
   clearInterval(globalObj.intervalTimer);
   if (parseInt(globalObj.lifeUser) <= 0 && parseInt(globalObj.lifeComputer) <= 0) {
@@ -213,6 +218,7 @@ function winOrLose() {
   }
 }
 
+// функия срабатывает при нажатии кнопки New Fight. Обновления всех полей всего для начала новой игры. Остается только имя игрока. 
 function activeTwoPageAndHideTreePage() {
   main.classList.add('hide');
   secondPageWrap.classList.remove('hide');
@@ -238,7 +244,6 @@ function activeTwoPageAndHideTreePage() {
     compHero: null,
     arena: null
   };
-
   consoleDiv.innerHTML = '<h1 class="makeAChoise"> Make a choise! </h1>';
   healthRefresh();
   form.reset();

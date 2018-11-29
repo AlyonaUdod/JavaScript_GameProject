@@ -14,6 +14,8 @@
 .section-fight {
   width: 100%;
   height: 75vh;
+  display: flex;
+  flex-direction: column;
   background-image: url(../img/arena/light.gif);
   background-repeat: no-repeat;
   background-size: cover;
@@ -28,39 +30,33 @@
 
 .form-place{
   width: 45%;
-  padding: 5px;
+  padding: .6vh;
   background-color: black;
   box-sizing: border-box;
-  border: 5px groove orangered;
+  border: .6vh groove orangered;
   display: flex;
   align-content: center;
 }
 
 .console-place{
   width: 55%;
-  padding: 5px;
+  padding: .6vh;
   background-color: black;
   box-sizing: border-box;
-  border: 5px groove orangered;
-}
-
-.section-fight {
-  display: flex;
-  flex-direction: column;
+  border: .6vh groove orangered;
 }
 
 .divContentLife {
-  margin-top: 30vh;
+  margin-top: 32vh;
   margin: 0 auto;
   display: flex;
-  min-width: 1024px;
-  max-width: 1024px;
+  width: 122.6vh;
   justify-content: space-around;
 }
 
 .divContentHero {
   margin: 20vh auto 0; 
-  width: 1024px;
+  width: 122.6vh;
   display: flex;
   justify-content: space-around;
 }
@@ -81,23 +77,29 @@
 
 .userHero {
   left: 0;
-  width: 128px;
-  height: 128px;
+  width: 24vh;
+  height: 24vh;
   position: relative;
   transition: left 1s linear;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .compHero {
   right: 0;
-  width: 128px;
-  height: 128px;
+  width: 24vh;
+  height: 24vh;
   transform: scaleX(-1);
   position: relative;
   transition: right 1s linear;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .test2 {
-  font-size: 30px;
+  font-size: 4.4vh;
   font-weight: 700;
   color: beige;
 }

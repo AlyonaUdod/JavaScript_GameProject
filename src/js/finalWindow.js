@@ -7,14 +7,15 @@ const content = document.querySelector('.fw-modal-content');
 const modalClose = document.querySelector('.fw-btn')
 modalClose.addEventListener('click', activeTwoPageAndHideTreePage);
 
+// функция отвечает за вывод текста и фоновой картинки в модальном окне
 function won(won) {
   if(won === 1) {
-    title.textContent = 'YOU WON!!!';
+    title.textContent = 'YOU WON!';
     content.style.backgroundImage = "url('./img/won.gif')";
     mwin();
 
   } else if(won === 2) {
-    title.textContent = 'YOU LOSE';
+    title.textContent = 'YOU LOST';
     content.style.backgroundImage = "url('./img/lose.gif')";
     mLoose();
 
@@ -25,35 +26,27 @@ function won(won) {
   }
 }
 
-function modalWindow({target}) {
-  const valid = (name) => target.className.indexOf(name) > 0 ? true : false;
-  if(valid('fw-js-close-modal')) {
-    modal.classList.toggle('fw-modal-hidden');
-
-  }
-}
-
+// функция запускает модальное окно
 function showFinalWindow() {
   modal.classList.toggle('fw-modal-hidden');
 }
 
+// функция запускается когда кто-то из игроков потерял всю жизнь.
 function winOrLose() {
    clearInterval(globalObj.intervalTimer);
     if(parseInt(globalObj.lifeUser) <= 0 && parseInt(globalObj.lifeComputer) <= 0) {
       showFinalWindow();
-      won(3);
-     
+      won(3); 
     } else if(parseInt(globalObj.lifeUser) <= 0){
       showFinalWindow();
       won(2);
-
     } else if(parseInt(globalObj.lifeComputer) <= 0) {
       showFinalWindow();
       won(1);
-
     }
 }
 
+// функия срабатывает при нажатии кнопки New Fight. Обновления всех полей всего для начала новой игры. Остается только имя игрока. 
 function activeTwoPageAndHideTreePage(){
   main.classList.add('hide');
   secondPageWrap.classList.remove('hide');
@@ -79,7 +72,6 @@ function activeTwoPageAndHideTreePage(){
     compHero: null,
     arena: null,
   };
-
   consoleDiv.innerHTML = '<h1 class="makeAChoise"> Make a choise! </h1>';
   healthRefresh();
   form.reset();
