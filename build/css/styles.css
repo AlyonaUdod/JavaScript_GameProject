@@ -588,7 +588,7 @@ label {
   font-weight: 900;
   width: 16vh;
   height: 16vh;
-  background-image: url(/img/mma.jpg);
+  background-image: url(../img/mma.jpg);
   background-position: center;
   background-size: cover;
   -webkit-animation: Anim_Before 1s ease-in infinite 0s;

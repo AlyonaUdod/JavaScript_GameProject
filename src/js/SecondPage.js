@@ -32,16 +32,16 @@ function activePage3() {
     secondPageWrap.classList.add('hide');
     main.classList.remove('hide');
     const arrCompHero = [{
-      img: '../img/hero/user-colossus.gif',
+      img: './img/hero/user-colossus.gif',
       character: 'colossus',
     }, {
-      img: '../img/hero/user-mystique.gif',
+      img: './img/hero/user-mystique.gif',
       character: 'mystique'
     }, {
-      img: '../img/hero/user-redskull.gif',
+      img: './img/hero/user-redskull.gif',
       character: 'redskull'
     }, {
-      img: '../img/hero/user-starlord.gif',
+      img: './img/hero/user-starlord.gif',
       character: 'starlord'
     }];
     const randomOfarrCompHero = Math.floor(Math.random() * arrCompHero.length);

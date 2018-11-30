@@ -1,18 +1,18 @@
 'use strict'
 
 function move(attackType) {
-  let result = (compHero.getBoundingClientRect().left - userHero.getBoundingClientRect().right) / 2 + 20;
+  let result = (compHero.getBoundingClientRect().left - userHero.getBoundingClientRect().right) / 2 + 40;
   moveCharacter(result, userHero, globalObj.userCharacter, 'left', attackType)
 }
 
 function compMove(attackType) {
-    let result = (compHero.getBoundingClientRect().left - userHero.getBoundingClientRect().right) / 2 + 20;
+    let result = (compHero.getBoundingClientRect().left - userHero.getBoundingClientRect().right) / 2 + 40;
     moveCharacter(result, compHero, globalObj.compCharacter, 'right', attackType)
 }
 
 function moveCharacter(result, hero, character, side, attackType) {
   hero.style[side] = `${result}px`;
-  hero.style.backgroundImage = `url(../img/hero/${character}/user-${character}_run.gif)`;
+  hero.style.backgroundImage = `url(./img/hero/${character}/user-${character}_run.gif)`;
   hero.style.width ='20vh';
   hero.style.height ='20vh';
   hero.style.marginTop ='2vh';
@@ -27,7 +27,7 @@ function moveCharacter(result, hero, character, side, attackType) {
     kickFunction();
   }, 1000)
   setTimeout(() => {
-    hero.style.backgroundImage = `url(../img/hero/${character}/user-${character}_run.gif)`;
+    hero.style.backgroundImage = `url(./img/hero/${character}/user-${character}_run.gif)`;
     hero.style.transform = side === 'left' ? 'scaleX(-1)' : 'scaleX(1)';
     hero.style.width ='20vh';
     hero.style.height ='20vh';
@@ -36,7 +36,7 @@ function moveCharacter(result, hero, character, side, attackType) {
 
   }, 2000)
   setTimeout(() => {
-    hero.style.backgroundImage = `url(../img/hero/user-${character}.gif)`;
+    hero.style.backgroundImage = `url(./img/hero/user-${character}.gif)`;
     hero.style.transform = side === 'left' ? 'scaleX(1)' : 'scaleX(-1)';
     hero.style.width ='24vh';
     hero.style.height ='24vh';

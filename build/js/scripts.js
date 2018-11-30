@@ -1,18 +1,18 @@
 'use strict';
 
 function move(attackType) {
-  var result = (compHero.getBoundingClientRect().left - userHero.getBoundingClientRect().right) / 2 + 20;
+  var result = (compHero.getBoundingClientRect().left - userHero.getBoundingClientRect().right) / 2 + 40;
   moveCharacter(result, userHero, globalObj.userCharacter, 'left', attackType);
 }
 
 function compMove(attackType) {
-  var result = (compHero.getBoundingClientRect().left - userHero.getBoundingClientRect().right) / 2 + 20;
+  var result = (compHero.getBoundingClientRect().left - userHero.getBoundingClientRect().right) / 2 + 40;
   moveCharacter(result, compHero, globalObj.compCharacter, 'right', attackType);
 }
 
 function moveCharacter(result, hero, character, side, attackType) {
   hero.style[side] = result + 'px';
-  hero.style.backgroundImage = 'url(../img/hero/' + character + '/user-' + character + '_run.gif)';
+  hero.style.backgroundImage = 'url(./img/hero/' + character + '/user-' + character + '_run.gif)';
   hero.style.width = '20vh';
   hero.style.height = '20vh';
   hero.style.marginTop = '2vh';
@@ -27,7 +27,7 @@ function moveCharacter(result, hero, character, side, attackType) {
     kickFunction();
   }, 1000);
   setTimeout(function () {
-    hero.style.backgroundImage = 'url(../img/hero/' + character + '/user-' + character + '_run.gif)';
+    hero.style.backgroundImage = 'url(./img/hero/' + character + '/user-' + character + '_run.gif)';
     hero.style.transform = side === 'left' ? 'scaleX(-1)' : 'scaleX(1)';
     hero.style.width = '20vh';
     hero.style.height = '20vh';
@@ -35,7 +35,7 @@ function moveCharacter(result, hero, character, side, attackType) {
     hero.style[side] = '0';
   }, 2000);
   setTimeout(function () {
-    hero.style.backgroundImage = 'url(../img/hero/user-' + character + '.gif)';
+    hero.style.backgroundImage = 'url(./img/hero/user-' + character + '.gif)';
     hero.style.transform = side === 'left' ? 'scaleX(1)' : 'scaleX(-1)';
     hero.style.width = '24vh';
     hero.style.height = '24vh';
@@ -469,16 +469,16 @@ function activePage3() {
     secondPageWrap.classList.add('hide');
     main.classList.remove('hide');
     var arrCompHero = [{
-      img: '../img/hero/user-colossus.gif',
+      img: './img/hero/user-colossus.gif',
       character: 'colossus'
     }, {
-      img: '../img/hero/user-mystique.gif',
+      img: './img/hero/user-mystique.gif',
       character: 'mystique'
     }, {
-      img: '../img/hero/user-redskull.gif',
+      img: './img/hero/user-redskull.gif',
       character: 'redskull'
     }, {
-      img: '../img/hero/user-starlord.gif',
+      img: './img/hero/user-starlord.gif',
       character: 'starlord'
     }];
     var randomOfarrCompHero = Math.floor(Math.random() * arrCompHero.length);
@@ -550,6 +550,7 @@ update(timeDuration, timeDuration); //обновление закрашиван�
 
 function timer() {
     // функция для расчета времени
+    displayRound.textContent = 'ROUND ' + globalObj.round;
     globalObj.round++;
     but.disabled = false;
     but.style.opacity = 1;
@@ -616,34 +617,34 @@ function atack(event) {
 function userCompair() {
     if (globalObj.user.atack === 'head' && globalObj.computer.defence !== 'head') {
         globalObj.lifeComputer -= globalObj.user.damage;
-        move('../img/hero/' + globalObj.userCharacter + '/user-' + globalObj.userCharacter + '_jump.gif');
+        move('./img/hero/' + globalObj.userCharacter + '/user-' + globalObj.userCharacter + '_jump.gif');
     } else if (globalObj.user.atack === 'body' && globalObj.computer.defence !== 'body') {
         globalObj.lifeComputer -= globalObj.user.damage;
-        move('../img/hero/' + globalObj.userCharacter + '/user-' + globalObj.userCharacter + '_attack.gif');
+        move('./img/hero/' + globalObj.userCharacter + '/user-' + globalObj.userCharacter + '_attack.gif');
     } else if (globalObj.user.atack === 'legs' && globalObj.computer.defence !== 'legs') {
         globalObj.lifeComputer -= globalObj.user.damage;
-        move('../img/hero/' + globalObj.userCharacter + '/user-' + globalObj.userCharacter + '_attack2.gif');
+        move('./img/hero/' + globalObj.userCharacter + '/user-' + globalObj.userCharacter + '_attack2.gif');
     } else {
         globalObj.user.damage = 0;
         globalObj.lifeComputer -= 0;
-        compMove('../img/hero/' + globalObj.compCharacter + '/user-' + globalObj.compCharacter + '_block.gif');
-        move('../img/hero/' + globalObj.userCharacter + '/user-' + globalObj.userCharacter + '_attack.gif');
+        compMove('./img/hero/' + globalObj.compCharacter + '/user-' + globalObj.compCharacter + '_block.gif');
+        move('./img/hero/' + globalObj.userCharacter + '/user-' + globalObj.userCharacter + '_attack.gif');
         console.log('Comp');
     }
     if (globalObj.computer.atack === 'head' && globalObj.user.defence !== 'head') {
         globalObj.lifeUser -= globalObj.computer.damage;
-        compMove('../img/hero/' + globalObj.compCharacter + '/user-' + globalObj.compCharacter + '_jump.gif');
+        compMove('./img/hero/' + globalObj.compCharacter + '/user-' + globalObj.compCharacter + '_jump.gif');
     } else if (globalObj.computer.atack === 'body' && globalObj.user.defence !== 'body') {
         globalObj.lifeUser -= globalObj.computer.damage;
-        compMove('../img/hero/' + globalObj.compCharacter + '/user-' + globalObj.compCharacter + '_attack.gif');
+        compMove('./img/hero/' + globalObj.compCharacter + '/user-' + globalObj.compCharacter + '_attack.gif');
     } else if (globalObj.computer.atack === 'legs' && globalObj.user.defence !== 'legs') {
         globalObj.lifeUser -= globalObj.computer.damage;
-        compMove('../img/hero/' + globalObj.compCharacter + '/user-' + globalObj.compCharacter + '_attack2.gif');
+        compMove('./img/hero/' + globalObj.compCharacter + '/user-' + globalObj.compCharacter + '_attack2.gif');
     } else {
         globalObj.computer.damage = 0;
         globalObj.lifeUser -= 0;
-        move('../img/hero/' + globalObj.userCharacter + '/user-' + globalObj.userCharacter + '_block.gif');
-        compMove('../img/hero/' + globalObj.compCharacter + '/user-' + globalObj.compCharacter + '_attack.gif');
+        move('./img/hero/' + globalObj.userCharacter + '/user-' + globalObj.userCharacter + '_block.gif');
+        compMove('./img/hero/' + globalObj.compCharacter + '/user-' + globalObj.compCharacter + '_attack.gif');
         console.log('User');
     }
     console.log(globalObj);
@@ -698,7 +699,6 @@ function timerStop() {
     but.style.opacity = .2;
     clearInterval(globalObj.intervalTimer);
     setTimeout(timer, 3000);
-    displayRound.textContent = 'ROUND ' + globalObj.round;
 }
 
 // функция запускает основную цепочку событий если игрок не успел нанести удар. 

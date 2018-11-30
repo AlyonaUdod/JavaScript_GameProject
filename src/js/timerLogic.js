@@ -21,6 +21,7 @@ function update(timeDuration, timeStep) {
 update(timeDuration, timeDuration); //обновление закрашивания бреущаое
 
 function timer() { // функция для расчета времени
+    displayRound.textContent = `ROUND ${globalObj.round}`
     globalObj.round++;
     but.disabled = false;
     but.style.opacity = 1;
