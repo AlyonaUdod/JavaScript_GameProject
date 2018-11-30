@@ -1,0 +1,107 @@
+#attack-defense {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center
+}
+.form-title {
+    color: white;
+    text-align: center;
+    font-size: 3.5vh;
+}
+.form-attack, .form-defense {
+    width: 35%;
+}
+.form-attack-list > li, .form-defense-list > li {
+    width: 14vh;
+    background: orangered;
+    margin: .7vh auto;
+    padding: 0.7vh;
+    border-radius: 2.4vh;
+    font-size: 2.6vh;
+}
+#submit {
+    margin: auto;
+    border-radius: 10vh;
+    color: orangered;   
+    font-size: 2.8vh;
+    font-weight: 900;
+    width: 16vh;
+    height: 16vh;
+    background-image: url(../img/mma.jpg);
+    background-position: center;
+    background-size: cover;
+    animation: Anim_Before 1s ease-in infinite 0s;
+}
+@keyframes  Anim_Before {
+    from {
+        box-shadow: 0 0 1.5vh orangered,
+        0 0 1.5vh orangered,
+        0 0 1.5vh orangered,
+        0 0 1.5vh orangered;
+      }
+      50% {
+        box-shadow: 1.2vh 0 1.5vh orangered,
+        0 1.2vh 1.5vh orangered,
+        -1.2vh 0 1.5vh orangered,
+        0 -1.2vh 1.5vh orangered;
+      }
+      to {
+        box-shadow: 0 0 1.5vh orangered,
+        0 0 1.5vh orangered,
+        0 0 1.5vh orangered,
+        0 0 1.5vh orangered;
+      }
+}
+.console-log{
+    box-sizing: border-box;
+    margin: 0.1vh auto;
+    padding: 1vh 1.5vh;
+    background: rgb(235, 235, 235);
+    color: orangered;
+    font-size: 2.2vh;
+    font-weight: 700;
+    height: 22.2vh;
+    overflow: scroll;
+}
+.console_pUser-style {
+    margin: .3vh 0;
+    color: orangered;
+    text-align: left;
+    width: 80%;
+}
+.console_pComp-style {
+    color: black;
+    text-align: right;
+    width: 80%;
+    margin-left: 20%;
+}
+
+.console_pRound-style {
+    text-align: center;
+    color: black;   
+    text-decoration-line: underline;
+    font-size: 2.5vh; 
+}
+
+.console_pDiv-style {
+    width: 100%;
+    margin-bottom: .5vh;
+}
+
+.console_pImg-style {
+    text-align: center;
+    color: black;
+}
+
+.makeAChoise {
+    font-family: "Suez+One", sans-serif;
+    font-size: 8.3vh;
+    font-weight: 700;
+    color: red;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 3vh;
+    text-shadow: .4vh .4vh .5vh black;
+}

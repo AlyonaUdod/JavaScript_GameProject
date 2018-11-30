@@ -1,3 +1,11 @@
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
 .main {
   width: 100%;
   height: 100vh;
@@ -5,35 +13,59 @@
 
 .section-fight {
   width: 100%;
-  height: 78%;
-  background-image: url(/img/light.gif);
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  background-image: url(../img/arena/light.gif);
   background-repeat: no-repeat;
   background-size: cover;
   box-sizing: border-box;
+  background-position: bottom;
 }
 
 .section-info{
   display: flex;
+  height: 25vh;
 }
 
 .form-place{
   width: 45%;
-  height: 22vh;
-  padding: 5px;
+  padding: .6vh;
   background-color: black;
   box-sizing: border-box;
-  border: 5px groove orangered;
+  border: .6vh groove orangered;
   display: flex;
   align-content: center;
 }
 
 .console-place{
   width: 55%;
-  height: 22vh;
-  padding: 5px;
+  padding: .6vh;
   background-color: black;
   box-sizing: border-box;
-  border: 5px groove orangered;
+  border: .6vh groove orangered;
+}
+
+.divContentLife {
+  margin-top: 32vh;
+  margin: 0 auto;
+  display: flex;
+  width: 122.6vh;
+  justify-content: space-around;
+}
+
+.divContentHero {
+  margin: 20vh auto 0; 
+  width: 122.6vh;
+  display: flex;
+  justify-content: space-around;
+}
+
+.timer{
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 ::-webkit-scrollbar { width: .8vh; height: 0vh;}
@@ -42,3 +74,32 @@
 ::-webkit-scrollbar-thumb { height: 50px; background-color: white; border-radius: 5px;}
 ::-webkit-scrollbar-corner { background-color: #666;}
 /* ::-webkit-resizer { background-color: red;} */
+
+.userHero {
+  left: 0;
+  width: 24vh;
+  height: 24vh;
+  position: relative;
+  transition: left 1s linear;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.compHero {
+  right: 0;
+  width: 24vh;
+  height: 24vh;
+  transform: scaleX(-1);
+  position: relative;
+  transition: right 1s linear;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.test2 {
+  font-size: 4.4vh;
+  font-weight: 700;
+  color: beige;
+}

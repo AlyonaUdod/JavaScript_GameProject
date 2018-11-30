@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css?family=Suez+One');
+.firstPage {
+    background-image: url(../img/arena/main.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+.firstPage-wrap {
+    width: 1024px;
+    margin: 0 auto;
+}
+.firstPage-logo {
+    display: block;
+    width: 76vh;
+    height: 28vh;
+    margin: 0 auto;
+    animation: bounceInDown 2s;
+}
+@keyframes bounceInDown {
+    from,
+    60%,
+    75%,
+    90%,
+    to {
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    0% {
+      opacity: 0;
+      transform: translate3d(0, -3000px, 0);
+    }
+    60% {
+      opacity: 1;
+      transform: translate3d(0, 25px, 0);
+    }
+    75% {
+      transform: translate3d(0, -10px, 0);
+    }
+    90% {
+      transform: translate3d(0, 5px, 0);
+    }
+    to {
+      transform: translate3d(0, 0, 0);
+    }
+}
+.firstPage-img {
+    display: block;
+    width: 25vh;
+    height: 25vh;
+    margin: 0 auto;
+    border-radius: 50%;
+    animation: zoomInUp 1s;
+}
+@keyframes zoomInUp {
+    from {
+      opacity: 0;
+      transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 1000px, 0);
+      animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+    60% {
+      opacity: 1;
+      transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
+      animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+    }
+}
+
+.bootcamp8 {
+  display: block;
+  width: 65vh;
+  margin: 2.7vh auto;
+  animation: bounceInDown 3s;
+}
+
+@keyframes bounceInUp {
+    from,
+    60%,
+    75%,
+    90%,
+    to {
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    from {
+      opacity: 0;
+      transform: translate3d(0, 3000px, 0);
+    }
+    60% {
+      opacity: 1;
+      transform: translate3d(0, -20px, 0);
+    }
+    75% {
+      transform: translate3d(0, 10px, 0);
+    }
+    90% {
+      transform: translate3d(0, -5px, 0);
+    }
+
+    to {
+      transform: translate3d(0, 0, 0);
+    }
+}
+#firstPage-input {
+    font-family: "Suez+One", sans-serif;
+    font-size: 2.8vh;
+    font-weight: 400;
+    font-style: italic;
+    color:black;
+    text-align: center;
+    display: block;
+    border: 2px solid orangered;
+    border-radius: 25px;
+    padding: 5px;
+    margin: 0 auto;
+
+}
+#firstPage-buttonStart {
+    font-family: "Suez+One", sans-serif;
+    font-size: 3.6vh;
+    font-weight: 700;
+    color: black;
+    background-color: white;
+    border: 2px solid orangered;
+    border-radius: 25px;
+    margin: 5.5vh auto .7vh;
+    text-align: center;
+    display: block;
+    width: 27vh;
+    height: 5vh;
+}

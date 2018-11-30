@@ -1,0 +1,126 @@
+
+.secondPage-wrap{
+    // background-color: black;
+    height: 100vh;
+    background: linear-gradient(to bottom, black, red, black),url('../img/bc_im_2nd_page.png');
+    background-blend-mode: multiply;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.secondPage-subtitle {
+    font-family: "Suez+One", sans-serif;
+    font-size: 7vh;
+    font-weight: 700;
+    color: orangered;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 6vh;
+}
+.secondPage-hero, .secondPage-field {
+   width: 130vh;
+   margin: 0 auto;
+   display: flex;
+   justify-content: space-between;
+}
+.secondPage-hero-one, .secondPage-hero-second, .secondPage-hero-third, .secondPage-hero-fourth {
+    width: 20vh;
+    height: 16vh;
+    border: .7vh solid black;
+    border-radius: 15px;
+    margin: 0 auto;
+}
+.secondPage-hero-one {
+    background: url(../img/colossus_run.gif) no-repeat center;
+    background-size: 19vh 19vh;
+}
+.secondPage-hero-one:hover {
+    border: .7vh solid orangered;
+}
+
+.secondPage-hero-second {
+    background: url(../img/mystique_run.gif) no-repeat center;
+    background-size: 19vh 19vh;
+}
+.secondPage-hero-second:hover {
+    border: .7vh solid orangered;
+}
+.secondPage-hero-third {
+    background: url(../img/redskull_run.gif) no-repeat center;
+    background-size: 19vh 19vh;
+}
+.secondPage-hero-third:hover {
+    border: .7vh solid orangered;
+}
+.secondPage-hero-fourth {
+    background: url(../img/starlord_run.gif) no-repeat center;
+    background-size: 19vh 19vh;
+}
+.secondPage-hero-fourth:hover {
+    border: .7vh solid orangered;
+}
+.secondPage-field-one, .secondPage-field-second, .secondPage-field-third, .secondPage-field-fourth, .secondPage-field-fifth {
+    width: 24vh;
+    height: 18vh;
+    border: .7vh solid black;
+    border-radius: 15px;
+    margin: 10vh auto;
+}
+.secondPage-field-one {
+    background: url(../img/arena/boat.gif) no-repeat center;
+    background-size: 24vh 18vh;
+}
+.secondPage-field-one:hover {
+    border: .7vh solid orangered;
+}
+.secondPage-field-second {
+    background: url(../img/arena/train.gif) no-repeat center;
+    background-size: 24vh 18vh;
+}
+.secondPage-field-second:hover {
+    border: .7vh solid orangered;
+}
+.secondPage-field-third {
+    background: url(../img/arena/light.gif) no-repeat center;
+    background-size: 24vh 18vh;
+}
+.secondPage-field-third:hover {
+    border: .7vh solid orangered;
+}
+.secondPage-field-fourth {
+    background: url(../img/arena/waterfall.gif) no-repeat center;
+    background-size: 24vh 18vh;
+}
+.secondPage-field-fourth:hover {
+    border: .7vh solid orangered;
+}
+.secondPage-field-fifth {
+    background: url(../img/arena/wind.gif) no-repeat center;
+    background-size: 24vh 18vh;
+}
+.secondPage-field-fifth:hover {
+    border: .7vh solid orangered;
+}
+.secondPage-link {
+    font-family: "Suez+One", sans-serif;
+    font-size: 3.8vh;
+    font-weight: 700;
+    color: black;
+    background-color: white;
+    border: 2px solid orangered;
+    border-radius: 25px;
+    margin: 1.2vh auto .5vh;
+    text-align: center;
+    display: block;
+    width: 24vh;
+    height: 5.5vh;
+}
+.hide {
+    display: none;
+}
+.show {
+    display: block;
+}
+.active {
+    border: .7vh solid orangered;
+}

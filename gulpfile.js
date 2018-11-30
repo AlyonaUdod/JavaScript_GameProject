@@ -97,6 +97,9 @@ gulp.task('images', () =>
 gulp.task('fonts', () =>
   gulp.src('./src/fonts/**/*.{woff,woff2}').pipe(gulp.dest('./build/fonts')),
 );
+gulp.task('music', () =>
+  gulp.src('./src/sounds/**/*.*').pipe(gulp.dest('./build/sounds')),
+);
 
 gulp.task('watch', () => {
   gulp.watch('src/**/*.html', ['html']).on('change', browserSync.reload);
@@ -130,6 +133,7 @@ gulp.task('build', cb =>
     'styles',
     'html',
     'scripts',
+    'music',
     cb,
   ),
 );
