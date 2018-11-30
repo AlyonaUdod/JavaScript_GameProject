@@ -693,7 +693,7 @@ label {
 .controllsPanel {
   position: absolute;
   left: 50%;
-  top: 10.6vh;
+  top: 11vh;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
 }
